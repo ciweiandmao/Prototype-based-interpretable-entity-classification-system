@@ -32,7 +32,7 @@ def merge_entity_descriptions(input_file, output_file):
 
 
 if __name__ == "__main__":
-    input_file = r"data\FB15KET\Entity_Type_valid_zh.txt"
-    output_file = r"data\FB15KET\Entity_Type_valid_zh_single.txt"
+    input_file = r"data\FB15KET\Entity_Type_train_zh.txt"
+    output_file = r"data\FB15KET\Entity_Type_train_zh_single.txt"
 
     merge_entity_descriptions(input_file, output_file)

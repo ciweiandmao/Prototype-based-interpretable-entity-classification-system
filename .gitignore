@@ -1,0 +1,14 @@
+# PyCharm
+.idea/
+*.iml
+*.iws
+*.ipr
+
+# JetBrains IDEs通用
+workspace.xml
+tasks.xml
+shelf/
+
+# 项目特定忽略
+.venv/
+__pycache__/

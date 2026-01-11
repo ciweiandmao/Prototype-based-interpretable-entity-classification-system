@@ -1,0 +1,39 @@
+IGRADNET TEST RESULTS
+==================================================
+Threshold: 0.0000
+Total tests: 30
+
+Valid predictions: 16/30 (53.3%)
+
+Detailed Results:
+--------------------------------------------------
+(0, 0, 1) | Score: 0.1058 | VALID | Type: adjacent
+(2, 0, 3) | Score: 0.2259 | VALID | Type: adjacent
+(4, 0, 5) | Score: -0.9913 | INVALID | Type: adjacent
+(6, 0, 7) | Score: 0.2535 | VALID | Type: adjacent
+(8, 0, 9) | Score: -0.9578 | INVALID | Type: adjacent
+(10, 0, 11) | Score: -0.2514 | INVALID | Type: adjacent
+(12, 0, 13) | Score: 0.2085 | VALID | Type: adjacent
+(258, 7, 197) | Score: -0.1582 | INVALID | Type: random
+(136, 5, 224) | Score: -0.5090 | INVALID | Type: random
+(233, 8, 159) | Score: -1.5212 | INVALID | Type: random
+(95, 8, 232) | Score: 0.5338 | VALID | Type: random
+(179, 1, 51) | Score: 0.0858 | VALID | Type: random
+(267, 7, 112) | Score: 0.2779 | VALID | Type: random
+(100, 1, 80) | Score: -0.7647 | INVALID | Type: random
+(186, 0, 1) | Score: 0.2499 | VALID | Type: boundary
+(129, 5, 223) | Score: 0.2197 | VALID | Type: boundary
+(224, 0, 125) | Score: -0.2028 | INVALID | Type: boundary
+(129, 4, 171) | Score: 0.8015 | VALID | Type: boundary
+(217, 5, 246) | Score: 1.3523 | VALID | Type: boundary
+(202, 7, 122) | Score: -0.5984 | INVALID | Type: boundary
+(254, 5, 279) | Score: -0.8721 | INVALID | Type: boundary
+(97, 0, 197) | Score: -1.0294 | INVALID | Type: same_pair
+(97, 1, 197) | Score: -0.4545 | INVALID | Type: same_pair
+(97, 2, 197) | Score: -1.0720 | INVALID | Type: same_pair
+(239, 0, 143) | Score: -0.4987 | INVALID | Type: same_pair
+(239, 1, 143) | Score: 1.9448 | VALID | Type: same_pair
+(239, 2, 143) | Score: 0.0886 | VALID | Type: same_pair
+(96, 0, 200) | Score: 0.0053 | VALID | Type: same_pair
+(96, 1, 200) | Score: 0.8974 | VALID | Type: same_pair
+(96, 2, 200) | Score: 0.2833 | VALID | Type: same_pair

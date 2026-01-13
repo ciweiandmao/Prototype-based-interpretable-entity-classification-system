@@ -3,12 +3,12 @@ base,45884,基础,0.16,6,学科与概念（Concept & Subject）
 topic,24357,专题,0.506,6,学科与概念（Concept & Subject）
 film,18715,胶片,4.5475,4,创作与娱乐作品（Creative Work）
 location,17935,地点,4.358,3,地点与地理（Location）
-award,14202,裁决,0.4509,4,创作与娱乐作品（Creative Work）
+award,14202,裁决,0.0509,4,创作与娱乐作品（Creative Work）
 people,12021,人员,2.9209,1,人物与生命（Person & Life）
 user,11601,用户,2.8189,1,人物与生命（Person & Life）
 tv,8252,电视,2.0051,7,物品与产品（Product & Object）
 music,7737,音乐,1.88,4,创作与娱乐作品（Creative Work）
-organization,5935,组织,2.4421,2,组织与机构（Organization）
+organization,5935,组织,2.9421,2,组织与机构（Organization）
 narphorium,5104,ium,1.2402,7,物品与产品（Product & Object）
 schemastaging,4771,计划,1.1593,7,物品与产品（Product & Object）
 person,4642,人员,2.1279,1,人物与生命（Person & Life）
@@ -16,7 +16,7 @@ popstra,4370,流行音乐,1.0619,4,创作与娱乐作品（Creative Work）
 book,4242,书本,3.0307,4,创作与娱乐作品（Creative Work）
 media_common,4163,媒体  常见,1.0116,4,创作与娱乐作品（Creative Work）
 award_nominee,4084,授予( N),2.9924,1,人物与生命（Person & Life）
-award_winner,3599,获奖者( W),2.8745,1,人物与生命（Person & Life）
+award_winner,3599,获奖者( W),2.5745,1,人物与生命（Person & Life）
 business,3504,商业,0.8514,6,学科与概念（Concept & Subject）
 actor,3427,演员,3.8327,1,人物与生命（Person & Life）
 aareas,3409,a 区域,0.8283,3,地点与地理（Location）
@@ -30,10 +30,10 @@ influence_node,2716,影响( Node),0.66,6,学科与概念（Concept & Subject）
 education,2631,学历,0.6393,8,属性与度量（Attribute & Measurement）
 sports,2567,运动,0.6237,5,事件与活动（Event）
 nndb_person,2446,nndb 个人,0.5943,1,人物与生命（Person & Life）
-ontologies,2421,肿瘤,0.5883,6,学科与概念（Concept & Subject）
+ontologies,2421,肿瘤,0.9883,6,学科与概念（Concept & Subject）
 statistical_region,2408,统计 区域,0.5851,3,地点与地理（Location）
 dated_location,2398,日期( L),0.5827,3,地点与地理（Location）
-ontology_instance,2380,肿瘤学( N),0.5783,6,学科与概念（Concept & Subject）
+ontology_instance,2380,肿瘤学( N),1.783,6,学科与概念（Concept & Subject）
 book_subject,2334,书目 主题,0.5671,8,属性与度量（Attribute & Measurement）
 producer,2255,生产商,0.5479,2,组织与机构（Organization）
 celebrity,2161,名人笔记,0.5251,4,创作与娱乐作品（Creative Work）
@@ -67,7 +67,7 @@ internet,1092,互联网,0.2653,6,学科与概念（Concept & Subject）
 symbols,1084,符号,0.2634,6,学科与概念（Concept & Subject）
 theater,1074,剧场,0.261,3,地点与地理（Location）
 travel,1047,旅费,0.2544,5,事件与活动（Event）
-concept,1025,概念,0.2491,6,学科与概念（Concept & Subject）
+concept,1025,概念,3.2491,6,学科与概念（Concept & Subject）
 sports_team,1003,运动团队,2.2437,2,组织与机构（Organization）
 alust,984,忧郁,0.2391,9,其他（Others）
 processed_with_review_queue,984,已处理( W),0.2391,7,物品与产品（Product & Object）
@@ -115,13 +115,13 @@ endowed_organization,556,赋予组织( O),0.1351,2,组织与机构（Organizatio
 tv_program_creator,553,tv 程序创建器,0.1344,1,人物与生命（Person & Life）
 earth,538,土质,0.1307,7,物品与产品（Product & Object）
 random,525,随机,0.1276,6,学科与概念（Concept & Subject）
-genre,518,流派,1.559,6,学科与概念（Concept & Subject）
+genre,518,流派,1.959,6,学科与概念（Concept & Subject）
 locations,510,地点,0.1239,3,地点与地理（Location）
 event,505,事件,2.8227,5,事件与活动（Event）
 taxonomy_subject,498,分类学 主题,0.121,6,学科与概念（Concept & Subject）
 organization_member,494,组织( 成员),0.12,1,人物与生命（Person & Life）
 county,490,县,0.1191,3,地点与地理（Location）
-award_category,488,裁决  类别,0.1186,5,事件与活动（Event）
+award_category,488,裁决  类别,0.986,8,属性与度量（Attribute & Measurement）
 us,477,我们,0.1159,1,人物与生命（Person & Life）
 tv_director,473,tv 导演,0.1149,1,人物与生命（Person & Life）
 olympics,456,奥林匹克运动会,0.1108,5,事件与活动（Event）
@@ -137,7 +137,7 @@ vocabulary_equivalent_topic,361,词汇表 等同 主题,0.8877,6,学科与概念
 architecture,359,结构,0.0872,8,属性与度量（Attribute & Measurement）
 fictional_character_creator,349,虚构的( C),0.0848,1,人物与生命（Person & Life）
 eating,343,吃饭,0.0833,5,事件与活动（Event）
-media_genre,343,介质类型( G),0.0833,4,创作与娱乐作品（Creative Work）
+media_genre,343,介质类型( G),0.5833,6,学科与概念（Concept & Subject）
 tv_program,333,tv 程序,0.0809,7,物品与产品（Product & Object）
 moscratch,332,苔藓,0.0807,7,物品与产品（Product & Object）
 visual_art,327,视觉艺术,0.0795,6,学科与概念（Concept & Subject）
@@ -146,7 +146,7 @@ royalty,318,特许权使用费,0.0773,2,组织与机构（Organization）
 activism,311,行动主义,0.0756,6,学科与概念（Concept & Subject）
 flag_referent,311,旗标( R),0.0756,7,物品与产品（Product & Object）
 educational_institution_extra,307,教育   机构  外部,1.746,2,组织与机构（Organization）
-academia,302,学术界,0.0734,6,学科与概念（Concept & Subject）
+academia,302,学术界,0.5734,6,学科与概念（Concept & Subject）
 person_in_fiction,297,人物小说,0.0722,1,人物与生命（Person & Life）
 berlininternationalfilmfestival,295,国际电影节,0.0717,5,事件与活动（Event）
 movies1001,290,电影1001,0.0705,4,创作与娱乐作品（Creative Work）
@@ -179,7 +179,7 @@ daylifetopics,236,日间生活主题,0.0573,4,创作与娱乐作品（Creative W
 comedian,233,喜剧演员,0.0566,1,人物与生命（Person & Life）
 guitarist,233,吉他师,0.0566,1,人物与生命（Person & Life）
 notable_person_with_medical_condition,231,注意( P),0.0561,1,人物与生命（Person & Life）
-field_of_study,230,学习区域( O),0.0559,3,地点与地理（Location）
+field_of_study,230,学习区域( O),1.0559,6,学科与概念（Concept & Subject）
 hall_of_fame_inductee,221,图标( F),0.0537,7,物品与产品（Product & Object）
 olympic_participating_country,220,奥林匹克  参加  国家,0.0535,2,组织与机构（Organization）
 work_of_fiction,218,工作( O),0.053,4,创作与娱乐作品（Creative Work）
@@ -225,7 +225,7 @@ religion,170,宗教,0.0413,6,学科与概念（Concept & Subject）
 aubreymaturin,170,奥布里马图林,0.0413,1,人物与生命（Person & Life）
 record_label,169,记录  标签,0.0411,7,物品与产品（Product & Object）
 professional_sports_team,169,专业   体育  团队,2.0411,2,组织与机构（Organization）
-film_genre,168,电影流派( G),0.0408,4,创作与娱乐作品（Creative Work）
+film_genre,168,电影流派( G),0.2408,6,学科与概念（Concept & Subject）
 philosophy,168,哲学,0.0408,6,学科与概念（Concept & Subject）
 nobelprizes,168,无贝尔普雷兹,0.0408,5,事件与活动（Event）
 netflix_genre,168,净弗利克斯  流派,0.0408,4,创作与娱乐作品（Creative Work）
@@ -271,7 +271,7 @@ alexbl,124,亚历山大,0.0301,1,人物与生命（Person & Life）
 honorary_title,123,荣誉( T),0.0299,7,物品与产品（Product & Object）
 state,120,状态,0.0292,8,属性与度量（Attribute & Measurement）
 instrument,120,文书,0.5292,7,物品与产品（Product & Object）
-production_company,120,生产 公司,0.0292,2,组织与机构（Organization）
+production_company,120,生产 公司,2.1292,2,组织与机构（Organization）
 disaster2,118,灾害2,0.0287,4,创作与娱乐作品（Creative Work）
 periodical_subject,118,常规 主题,0.0287,6,学科与概念（Concept & Subject）
 uk_statistical_location,118,uk 统计 位置,0.0287,3,地点与地理（Location）
@@ -314,7 +314,7 @@ theatrical_lyricist,95,戏剧 语言学家,0.0231,1,人物与生命（Person & L
 pet_owner,94,宠物拥有者,0.0228,1,人物与生命（Person & Life）
 sport_country,94,运动 国家,0.0228,3,地点与地理（Location）
 greatamericansongbookradio,94,伟大的美国之声,0.0228,2,组织与机构（Organization）
-website_category,93,网站 类别,0.0226,6,学科与概念（Concept & Subject）
+website_category,93,网站 类别,0.2226,8,属性与度量（Attribute & Measurement）
 comedy_group_member,93,喜剧 团体 成员,0.0226,1,人物与生命（Person & Life）
 diet_follower,92,饮食( F),0.0224,1,人物与生命（Person & Life）
 folklore,90,民间传说,0.0219,7,物品与产品（Product & Object）
@@ -670,7 +670,7 @@ crime_victim,30,犯罪 受害人,0.0073,1,人物与生命（Person & Life）
 noble_person,30,高级人物,0.0073,1,人物与生命（Person & Life）
 shapedcities,30,形状城市,0.0073,8,属性与度量（Attribute & Measurement）
 nitromaster101,30,硝化炉101,0.0073,1,人物与生命（Person & Life）
-school_category,30,学校类别,0.0073,8,属性与度量（Attribute & Measurement）
+school_category,30,学校类别,0.2073,8,属性与度量（Attribute & Measurement）
 world_cup_squad,30,世界( C),0.0073,8,属性与度量（Attribute & Measurement）
 datedlocationtest,30,日期定位测试,0.0073,,
 government_agency,30,政府机构,0.0073,2,组织与机构（Organization）
@@ -743,7 +743,7 @@ split_completed,25,拆分( 已完成),0.0061,,
 compositional_form,25,组成( F),0.0061,,
 conference_subject,25,会议 主题,0.0061,6,学科与概念（Concept & Subject）
 disputed_location_claimant,25,有争议的位置( C),0.0061,,
-government_office_category,25,政府 办公室 类别,0.0061,,
+government_office_category,25,政府 办公室 类别,0.1061,8,属性与度量（Attribute & Measurement）
 aptamer,24,贴纸,0.0058,,
 fblinux,24,fblinux 函数,0.0058,,
 gleebase,24,弹簧,0.0058,,
@@ -795,7 +795,7 @@ basketball_player,22,篮球  玩家,0.0053,,
 sports_league_draft,22,运动( L),0.0053,,
 ncaa_basketball_team,22,ncaa 篮球 队,0.0053,,
 recurring_competition,22,经常性( C),0.0053,,
-venture_funded_company,22,投资  供资  公司,0.0053,,
+venture_funded_company,22,投资  供资  公司,0.5053,2,组织与机构（Organization）
 honorary_degree_recipient,22,荣誉 度 接受者,0.0053,,
 computer_manufacturer_brand,22,计算机 制造商 品牌,0.0053,,
 nz,21,无,0.0051,,
@@ -1021,7 +1021,7 @@ club_interest,14,俱乐部 利息,0.0034,,
 contractbridge,14,合同桥,0.0034,,
 proposal_agent,14,建议代理人( A),0.0034,,
 ballet_composer,14,芭蕾舞  组合器,0.0034,,
-military_awards,14,军衔,0.0034,,
+military_awards,14,军衔,1.6034,8,属性与度量（Attribute & Measurement）
 nl_municipality,14,nl 市镇,0.0034,,
 audio_book_reader,14,音频读取器,0.0034,,
 baseball_position,14,棒球位置( P),0.0034,,

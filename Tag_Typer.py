@@ -231,5 +231,5 @@ def main():
                 print(f"  {categories[num]}: {count} 个 ({percentage:.1f}%)")
 
 
-if __name__ == "__main__":
-    main()
+#if __name__ == "__main__":
+#    main()

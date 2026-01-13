@@ -1,27 +1,27 @@
 Tag,出现次数,中文描述,权重,类别,类别名称
-base,45884,基础,11.1492,6,学科与概念（Concept & Subject）
-topic,24357,专题,5.9184,6,学科与概念（Concept & Subject）
-film,18715,胶片,4.5475,7,物品与产品（Product & Object）
+base,45884,基础,0.06,6,学科与概念（Concept & Subject）
+topic,24357,专题,0.506,6,学科与概念（Concept & Subject）
+film,18715,胶片,4.5475,4,创作与娱乐作品（Creative Work）
 location,17935,地点,4.358,3,地点与地理（Location）
-award,14202,裁决,3.4509,6,学科与概念（Concept & Subject）
+award,14202,裁决,0.4509,4,创作与娱乐作品（Creative Work）
 people,12021,人员,2.9209,1,人物与生命（Person & Life）
 user,11601,用户,2.8189,1,人物与生命（Person & Life）
 tv,8252,电视,2.0051,7,物品与产品（Product & Object）
 music,7737,音乐,1.88,4,创作与娱乐作品（Creative Work）
-organization,5935,组织,1.4421,2,组织与机构（Organization）
+organization,5935,组织,2.4421,2,组织与机构（Organization）
 narphorium,5104,ium,1.2402,7,物品与产品（Product & Object）
 schemastaging,4771,计划,1.1593,7,物品与产品（Product & Object）
-person,4642,人员,1.1279,1,人物与生命（Person & Life）
+person,4642,人员,2.1279,1,人物与生命（Person & Life）
 popstra,4370,流行音乐,1.0619,4,创作与娱乐作品（Creative Work）
-book,4242,书本,1.0307,4,创作与娱乐作品（Creative Work）
+book,4242,书本,3.0307,4,创作与娱乐作品（Creative Work）
 media_common,4163,媒体  常见,1.0116,4,创作与娱乐作品（Creative Work）
-award_nominee,4084,授予( N),0.9924,1,人物与生命（Person & Life）
-award_winner,3599,获奖者( W),0.8745,1,人物与生命（Person & Life）
+award_nominee,4084,授予( N),2.9924,1,人物与生命（Person & Life）
+award_winner,3599,获奖者( W),2.8745,1,人物与生命（Person & Life）
 business,3504,商业,0.8514,6,学科与概念（Concept & Subject）
-actor,3427,演员,0.8327,1,人物与生命（Person & Life）
+actor,3427,演员,3.8327,1,人物与生命（Person & Life）
 aareas,3409,a 区域,0.8283,3,地点与地理（Location）
 schema,3375,计划,0.8201,7,物品与产品（Product & Object）
-tv_actor,3130,tv 显示器,0.7605,1,人物与生命（Person & Life）
+tv_actor,3130,tv 显示器,3.7605,1,人物与生命（Person & Life）
 default_domain,3084,默认区域,0.7494,3,地点与地理（Location）
 artist,3023,艺术家,0.7345,1,人物与生命（Person & Life）
 person_or_entity_appearing_in_film,2933,个人 或实体 出现 在 电影,0.7127,1,人物与生命（Person & Life）
@@ -68,7 +68,7 @@ symbols,1084,符号,0.2634,6,学科与概念（Concept & Subject）
 theater,1074,剧场,0.261,3,地点与地理（Location）
 travel,1047,旅费,0.2544,5,事件与活动（Event）
 concept,1025,概念,0.2491,6,学科与概念（Concept & Subject）
-sports_team,1003,运动团队,0.2437,2,组织与机构（Organization）
+sports_team,1003,运动团队,2.2437,2,组织与机构（Organization）
 alust,984,忧郁,0.2391,9,其他（Others）
 processed_with_review_queue,984,已处理( W),0.2391,7,物品与产品（Product & Object）
 hud_foreclosure_area,973,屏蔽  取消赎回  区域,0.2364,3,地点与地理（Location）
@@ -81,9 +81,9 @@ social_network_user,890,社会 网络 用户,0.2163,1,人物与生命（Person &
 context_name,873,上下文名称,0.2121,6,学科与概念（Concept & Subject）
 medicine,861,药,0.2092,7,物品与产品（Product & Object）
 celebrities,857,名人间,0.2082,8,属性与度量（Attribute & Measurement）
-sports_team_extra,854,运动( T),0.2075,2,组织与机构（Organization）
+sports_team_extra,854,运动( T),1.2075,2,组织与机构（Organization）
 soccer,849,足球,0.2063,7,物品与产品（Product & Object）
-football_team,847,足球队,0.2058,2,组织与机构（Organization）
+football_team,847,足球队,2.2058,2,组织与机构（Organization）
 allthingsnewyork,835,"所有东西,纽约克",0.2029,3,地点与地理（Location）
 tv_producer,828,tv 生产者,0.2012,2,组织与机构（Organization）
 academyawards,781,学士学位,0.1898,6,学科与概念（Concept & Subject）
@@ -92,10 +92,10 @@ educational_institution,764,教育机构,0.1856,2,组织与机构（Organization
 tv_program_guest,750,tv program 客户端,0.1822,7,物品与产品（Product & Object）
 organization_founder,744,组织创建者,0.1808,1,人物与生命（Person & Life）
 business_operation,723,运营,0.1757,5,事件与活动（Event）
-university,719,大学,0.1747,2,组织与机构（Organization）
+university,719,大学,2.1747,2,组织与机构（Organization）
 skosbase,718,skosbase (英语).,0.1745,3,地点与地理（Location）
 music_contributor,707,音乐( C),0.1718,1,人物与生命（Person & Life）
-sports_team_location,688,运动   团队  位置,0.1672,3,地点与地理（Location）
+sports_team_location,688,运动   团队  位置,1.1672,3,地点与地理（Location）
 film_story_contributor,671,胶片 故事 贡献者,0.163,1,人物与生命（Person & Life）
 educational_institution_campus,669,教育 机构 校园,0.1626,2,组织与机构（Organization）
 capital_of_administrative_division,636,首府 行政区划,0.1545,2,组织与机构（Organization）
@@ -224,7 +224,7 @@ non_profit_organization,171,非营利组织,0.0416,2,组织与机构（Organizat
 religion,170,宗教,0.0413,6,学科与概念（Concept & Subject）
 aubreymaturin,170,奥布里马图林,0.0413,1,人物与生命（Person & Life）
 record_label,169,记录  标签,0.0411,7,物品与产品（Product & Object）
-professional_sports_team,169,专业   体育  团队,0.0411,2,组织与机构（Organization）
+professional_sports_team,169,专业   体育  团队,2.0411,2,组织与机构（Organization）
 film_genre,168,电影流派( G),0.0408,4,创作与娱乐作品（Creative Work）
 philosophy,168,哲学,0.0408,6,学科与概念（Concept & Subject）
 nobelprizes,168,无贝尔普雷兹,0.0408,5,事件与活动（Event）
@@ -279,7 +279,7 @@ daylife_id,117,日寿( id),0.0284,8,属性与度量（Attribute & Measurement）
 protected_sites,117,保护的站点( S),0.0284,7,物品与产品（Product & Object）
 karlovyvaryinternationalfilmfestival,117,卡洛维里国际电影节,0.0284,5,事件与活动（Event）
 political_district,116,政 区,0.0282,3,地点与地理（Location）
-extended_university,115,扩展的大学,0.0279,2,组织与机构（Organization）
+extended_university,115,扩展的大学,1.0279,2,组织与机构（Organization）
 database,112,数据库,0.0272,7,物品与产品（Product & Object）
 bioventurist,112,生物通风师,0.0272,1,人物与生命（Person & Life）
 marchmadness,111,游行疯狂,0.027,5,事件与活动（Event）
@@ -342,7 +342,7 @@ defunct_company,83,已停业 公司,0.0202,2,组织与机构（Organization）
 qualia,82,夸利亚,0.0199,9,其他（Others）
 us_congress,82,我们的大会( C),0.0199,2,组织与机构（Organization）
 consumer_company,81,消费者 公司,0.0197,2,组织与机构（Organization）
-hockey_team,79,曲棍球小队,0.0192,2,组织与机构（Organization）
+hockey_team,79,曲棍球小队,2.0192,2,组织与机构（Organization）
 earthquakes,78,地震,0.019,5,事件与活动（Event）
 worldwartwo,78,世界大战,0.019,5,事件与活动（Event）
 job_title,77,任务( T),0.0187,6,学科与概念（Concept & Subject）
@@ -424,7 +424,7 @@ firsts,58,首,0.0141,9,其他（Others）
 phobias,58,恐惧症,0.0141,6,学科与概念（Concept & Subject）
 ice_hockey,58,冰块,0.0141,7,物品与产品（Product & Object）
 ride_theme,58,运行( T),0.0141,9,其他（Others）
-basketball_team,58,篮球 团队,0.0141,2,组织与机构（Organization）
+basketball_team,58,篮球 团队,2.0141,2,组织与机构（Organization）
 politicalconventions,58,政治公约,0.0141,2,组织与机构（Organization）
 statistical_region_extra,58,统计 区域 外部,0.0141,3,地点与地理（Location）
 person_impersonated_on_snl,58,人物( I),0.0141,1,人物与生命（Person & Life）
@@ -447,7 +447,7 @@ casinos,55,赌场,0.0134,3,地点与地理（Location）
 district,55,地区,0.0134,3,地点与地理（Location）
 astronomy,55,天文学,0.0134,6,学科与概念（Concept & Subject）
 cambridge,55,凸轮桥,0.0134,7,物品与产品（Product & Object）
-school_sports_team,55,学校 体育 团队,0.0134,2,组织与机构（Organization）
+school_sports_team,55,学校 体育 团队,2.0134,2,组织与机构（Organization）
 shape_note_singing,55,形状( S),0.0134,8,属性与度量（Attribute & Measurement）
 setrakian,54,塞特拉克语Name,0.0131,1,人物与生命（Person & Life）
 contact_product,54,联系人 产品,0.0131,7,物品与产品（Product & Object）
@@ -522,226 +522,226 @@ named_person,43,名称( P),0.0104,1,人物与生命（Person & Life）
 pastusobrown,43,面额,0.0104,1,人物与生命（Person & Life）
 olympic_games,43,奥林匹克游戏,0.0104,5,事件与活动（Event）
 thoroughbredracing,43,彻底绘制,0.0104,5,事件与活动（Event）
-tourist_attraction,43,游客( T),0.0104,,
-bipolar_disorder_sufferer,43,双极体( D),0.0104,,
-colleges_and_universities,43,大学,0.0104,,
-usnris,42,用户,0.0102,,
-comic_book_creator,42,漫画   书本创建器,0.0102,,
-earthquake_epicenter,42,地震,0.0102,,
-role,41,角色,0.01,,
-lapax,41,磁盘,0.01,,
-venue,41,地点,0.01,,
-department,41,部门,0.01,,
-occupation,41,职业,0.01,,
-baseball_team,41,棒球队( T),0.01,,
-productplacement,41,产品放置,0.01,,
-landlocked_country,41,内陆国,0.01,,
-professional_field,41,专业,0.01,,
-school_or_movement,41,学校( 或),0.01,,
-world_cup_participation,41,世界语   cup  参与,0.01,,
-mythical_creature_location,41,虚构  creature  位置,0.01,,
-morelaw,40,更进一步,0.0097,,
-helynevek,40,赫利内韦克,0.0097,,
-mapcentral,40,中图,0.0097,,
-foodrecipes,40,食谱,0.0097,,
-public_speaker,40,公共演讲器,0.0097,,
+tourist_attraction,43,游客( T),0.0104,8,属性与度量（Attribute & Measurement）
+bipolar_disorder_sufferer,43,双极体( D),0.0104,9,其他（Others）
+colleges_and_universities,43,大学,0.0104,2,组织与机构（Organization）
+usnris,42,用户,0.0102,1,人物与生命（Person & Life）
+comic_book_creator,42,漫画   书本创建器,0.0102,1,人物与生命（Person & Life）
+earthquake_epicenter,42,地震,0.0102,7,物品与产品（Product & Object）
+role,41,角色,0.01,1,人物与生命（Person & Life）
+lapax,41,磁盘,0.01,7,物品与产品（Product & Object）
+venue,41,地点,0.01,3,地点与地理（Location）
+department,41,部门,0.01,2,组织与机构（Organization）
+occupation,41,职业,0.01,8,属性与度量（Attribute & Measurement）
+baseball_team,41,棒球队( T),2.01,2,组织与机构（Organization）
+productplacement,41,产品放置,0.01,9,其他（Others）
+landlocked_country,41,内陆国,0.01,2,组织与机构（Organization）
+professional_field,41,专业,0.01,6,学科与概念（Concept & Subject）
+school_or_movement,41,学校( 或),0.01,4,创作与娱乐作品（Creative Work）
+world_cup_participation,41,世界语   cup  参与,0.01,5,事件与活动（Event）
+mythical_creature_location,41,虚构  creature  位置,0.01,3,地点与地理（Location）
+morelaw,40,更进一步,0.0097,6,学科与概念（Concept & Subject）
+helynevek,40,赫利内韦克,0.0097,3,地点与地理（Location）
+mapcentral,40,中图,0.0097,3,地点与地理（Location）
+foodrecipes,40,食谱,0.0097,7,物品与产品（Product & Object）
+public_speaker,40,公共演讲器,0.0097,1,人物与生命（Person & Life）
 building_occupant,40,大楼( 用户),0.0097,,
-london,39,伦敦,0.0095,,
+london,39,伦敦,0.0095,3,地点与地理（Location）
 osprey,39,pre,0.0095,,
 visleg,39,组合,0.0095,,
 reviews,39,审查,0.0095,,
-sundance,39,日间活动,0.0095,,
-innovator,39,创新者,0.0095,,
-soapoperas,39,肥皂纸,0.0095,,
-asset_owner,39,资产所有者,0.0095,,
-comic_book_genre,39,漫画  book 流派,0.0095,,
-nobel_prize_winner,39,无贝尔  prize  winner,0.0095,,
-administrative_county,39,行政区,0.0095,,
-membership_organization,39,成员 组织,0.0095,,
+sundance,39,日间活动,0.0095,5,事件与活动（Event）
+innovator,39,创新者,0.0095,1,人物与生命（Person & Life）
+soapoperas,39,肥皂纸,0.0095,7,物品与产品（Product & Object）
+asset_owner,39,资产所有者,0.0095,1,人物与生命（Person & Life）
+comic_book_genre,39,漫画  book 流派,0.0095,4,创作与娱乐作品（Creative Work）
+nobel_prize_winner,39,无贝尔  prize  winner,0.0095,1,人物与生命（Person & Life）
+administrative_county,39,行政区,0.0095,3,地点与地理（Location）
+membership_organization,39,成员 组织,0.0095,2,组织与机构（Organization）
 uoa_it,38,uoa it,0.0092,,
-art_owner,38,艺术拥有者,0.0092,,
+art_owner,38,艺术拥有者,0.0092,1,人物与生命（Person & Life）
 pethealth,38,宠物保健,0.0092,,
-cvg_designer,38,cvg 设计器,0.0092,,
-municipality,38,市镇,0.0092,,
-tv_character,38,tv 特性,0.0092,,
-twinnedtowns,38,双胞胎城镇,0.0092,,
-aircraft_owner,38,飞机拥有者,0.0092,,
+cvg_designer,38,cvg 设计器,0.0092,1,人物与生命（Person & Life）
+municipality,38,市镇,0.0092,3,地点与地理（Location）
+tv_character,38,tv 特性,0.0092,8,属性与度量（Attribute & Measurement）
+twinnedtowns,38,双胞胎城镇,0.0092,3,地点与地理（Location）
+aircraft_owner,38,飞机拥有者,0.0092,1,人物与生命（Person & Life）
 greek_loanword,38,希腊语  借词,0.0092,,
-londonfilmfestival,38,伦敦电影节,0.0092,,
-periodical_publisher,38,期刊( P),0.0092,,
-medical_condition_in_fiction,38,医疗条件   虚构,0.0092,,
-icons,37,图标,0.009,,
-lawyer,37,律师,0.009,,
-charities,37,慈善机构,0.009,,
-infection,37,感染,0.009,,
-godparents,37,教父亲,0.009,,
-us_president,37,我们的主席,0.009,,
+londonfilmfestival,38,伦敦电影节,0.0092,5,事件与活动（Event）
+periodical_publisher,38,期刊( P),0.0092,2,组织与机构（Organization）
+medical_condition_in_fiction,38,医疗条件   虚构,0.0092,8,属性与度量（Attribute & Measurement）
+icons,37,图标,0.009,7,物品与产品（Product & Object）
+lawyer,37,律师,0.009,1,人物与生命（Person & Life）
+charities,37,慈善机构,0.009,2,组织与机构（Organization）
+infection,37,感染,0.009,6,学科与概念（Concept & Subject）
+godparents,37,教父亲,0.009,1,人物与生命（Person & Life）
+us_president,37,我们的主席,0.009,1,人物与生命（Person & Life）
 places_westward,37,地点( W),0.009,,
-product_endorser,37,产品创建器( A),0.009,,
-boats,36,船只,0.0087,,
-harrypotter,36,电击手,0.0087,,
-focal_location,36,焦距位置,0.0087,,
+product_endorser,37,产品创建器( A),0.009,1,人物与生命（Person & Life）
+boats,36,船只,0.0087,7,物品与产品（Product & Object）
+harrypotter,36,电击手,0.0087,1,人物与生命（Person & Life）
+focal_location,36,焦距位置,0.0087,3,地点与地理（Location）
 notablenewyorkers,36,显著的新青年,0.0087,,
 convicted_criminal,36,已定罪   犯罪,0.0087,,
-national_football_league,36,国家( F),0.0087,,
-austin,35,奥斯汀,0.0085,,
+national_football_league,36,国家( F),0.0087,5,事件与活动（Event）
+austin,35,奥斯汀,0.0085,3,地点与地理（Location）
 rewards,35,奖励,0.0085,,
-breakfast,35,早饭,0.0085,,
+breakfast,35,早饭,0.0085,7,物品与产品（Product & Object）
 joehughes,35,欢呼吧,0.0085,,
 onephylogeny,35,单亲性,0.0085,,
 propositions,35,提议,0.0085,,
-inauguration_speaker,35,启用语句( S),0.0085,,
-cancer_center_constituent,35,癌症( C),0.0085,,
+inauguration_speaker,35,启用语句( S),0.0085,1,人物与生命（Person & Life）
+cancer_center_constituent,35,癌症( C),0.0085,6,学科与概念（Concept & Subject）
 fr,34,f 数据,0.0083,,
-idea,34,创意,0.0083,,
-atlanta,34,亚特兰大,0.0083,,
+idea,34,创意,0.0083,4,创作与娱乐作品（Creative Work）
+atlanta,34,亚特兰大,0.0083,3,地点与地理（Location）
 armed_force,34,武装,0.0083,,
-comic_strips,34,漫画,0.0083,,
-original_owner,34,原始拥有者( O),0.0083,,
-sopranosingers,34,女高音演员,0.0083,,
-losangelesbands,34,丝带,0.0083,,
-governmental_body,34,政府机关,0.0083,,
-geographical_scope,34,地理范围,0.0083,,
+comic_strips,34,漫画,0.0083,4,创作与娱乐作品（Creative Work）
+original_owner,34,原始拥有者( O),0.0083,1,人物与生命（Person & Life）
+sopranosingers,34,女高音演员,0.0083,1,人物与生命（Person & Life）
+losangelesbands,34,丝带,0.0083,7,物品与产品（Product & Object）
+governmental_body,34,政府机关,0.0083,2,组织与机构（Organization）
+geographical_scope,34,地理范围,0.0083,3,地点与地理（Location）
 coat_of_arms_bearer,34,图标( A),0.0083,,
-uk_non_metropolitan_county,34,uk not metropolitan 县,0.0083,,
-coco,33,可可,0.008,,
+uk_non_metropolitan_county,34,uk not metropolitan 县,0.0083,2,组织与机构（Organization）
+coco,33,可可,0.008,7,物品与产品（Product & Object）
 johm,33,乔姆,0.008,,
-games,33,游戏,0.008,,
+games,33,游戏,0.008,7,物品与产品（Product & Object）
 didwho,33,谁,0.008,,
-synedra,33,丝带,0.008,,
+synedra,33,丝带,0.008,7,物品与产品（Product & Object）
 project_role,33,项目( R),0.008,,
-mobile_phones,33,手机,0.008,,
-activism_issue,33,活动 问题,0.008,,
-militaryinfiction,33,军事虚构,0.008,,
-my_favorite_things,33,我最喜欢的东西,0.008,,
-transit_service_area,33,中转 服务 区域,0.008,,
-nationalfootballleague,33,国家足协,0.008,,
-non_metropolitan_county,33,非都会  county,0.008,,
-organism_classification,33,有机体分类,0.008,,
-carnegie_mellon_university,33,Carnegie mellon 大学,0.008,,
+mobile_phones,33,手机,0.008,7,物品与产品（Product & Object）
+activism_issue,33,活动 问题,0.008,6,学科与概念（Concept & Subject）
+militaryinfiction,33,军事虚构,0.008,4,创作与娱乐作品（Creative Work）
+my_favorite_things,33,我最喜欢的东西,0.008,7,物品与产品（Product & Object）
+transit_service_area,33,中转 服务 区域,0.008,3,地点与地理（Location）
+nationalfootballleague,33,国家足协,0.008,2,组织与机构（Organization）
+non_metropolitan_county,33,非都会  county,0.008,2,组织与机构（Organization）
+organism_classification,33,有机体分类,0.008,6,学科与概念（Concept & Subject）
+carnegie_mellon_university,33,Carnegie mellon 大学,1.008,2,组织与机构（Organization）
 pak21,32,点21,0.0078,,
 ports,32,端口,0.0078,,
-elbogen,32,精灵,0.0078,,
+elbogen,32,精灵,0.0078,1,人物与生命（Person & Life）
 doconnor,32,医生,0.0078,,
-appointer,32,任命者,0.0078,,
-conductor,32,导师,0.0078,,
+appointer,32,任命者,0.0078,1,人物与生命（Person & Life）
+conductor,32,导师,0.0078,1,人物与生命（Person & Life）
 it_comune,32,社区,0.0078,,
-patronage,32,赞助,0.0078,,
-contestant,32,参赛者,0.0078,,
+patronage,32,赞助,0.0078,5,事件与活动（Event）
+contestant,32,参赛者,0.0078,1,人物与生命（Person & Life）
 original_idea,32,原创 idea,0.0078,,
 dedicated_work,32,专用( W),0.0078,,
-newspaper_owner,32,报纸所有者( O),0.0078,,
-olympic_host_city,32,奥林匹克 东道主 城市,0.0078,,
-school_in_fiction,32,学校 小说,0.0078,,
-fictional_character,32,虚构( C),0.0078,,
+newspaper_owner,32,报纸所有者( O),0.0078,1,人物与生命（Person & Life）
+olympic_host_city,32,奥林匹克 东道主 城市,0.0078,3,地点与地理（Location）
+school_in_fiction,32,学校 小说,0.0078,2,组织与机构（Organization）
+fictional_character,32,虚构( C),0.0078,1,人物与生命（Person & Life）
 bisac,31,双子,0.0075,,
 tvepg,31,视频,0.0075,,
-ballet,31,芭蕾舞团,0.0075,,
+ballet,31,芭蕾舞团,0.0075,5,事件与活动（Event）
 bandom,31,乐队,0.0075,,
-player,31,播放器,0.0075,,
+player,31,播放器,0.0075,1,人物与生命（Person & Life）
 catalog,31,目录,0.0075,,
 soprano,31,女高音,0.0075,,
-inventor,31,发明者,0.0075,,
-fairestcat,31,最美的猫,0.0075,,
-malemodels,31,男性模特,0.0075,,
-poetrybase,31,诗歌库,0.0075,,
+inventor,31,发明者,0.0075,1,人物与生命（Person & Life）
+fairestcat,31,最美的猫,0.0075,1,人物与生命（Person & Life）
+malemodels,31,男性模特,0.0075,1,人物与生命（Person & Life）
+poetrybase,31,诗歌库,0.0075,7,物品与产品（Product & Object）
 zxspectrum,31,zx光谱,0.0075,,
 collectives,31,集体,0.0075,,
 carmenmfenn1,31,车门芬1,0.0075,,
-film_company,31,电影 公司,0.0075,,
-magazine_genre,31,杂志流派( G),0.0075,,
-medical_treatment,31,医疗-治疗,0.0075,,
+film_company,31,电影 公司,0.0075,2,组织与机构（Organization）
+magazine_genre,31,杂志流派( G),0.0075,4,创作与娱乐作品（Creative Work）
+medical_treatment,31,医疗-治疗,0.0075,6,学科与概念（Concept & Subject）
 unitary_authority,31,统一权限( A),0.0075,,
 states_i_ve_been_to,31,状态 i ve been to,0.0075,,
 pinball_machine_basis,31,弹球  机器  基础,0.0075,,
-bisac_equivalent_subject,31,birac 等效 主题,0.0075,,
-shanghaiinternationalfilmfestival,31,上海国际电影节,0.0075,,
-former_british_colonies_and_dominions,31,前   英国   殖民地   和   殖民地,0.0075,,
-in,30,输入,0.0073,,
-it,30,这个,0.0073,,
+bisac_equivalent_subject,31,birac 等效 主题,0.0075,6,学科与概念（Concept & Subject）
+shanghaiinternationalfilmfestival,31,上海国际电影节,0.0075,5,事件与活动（Event）
+former_british_colonies_and_dominions,31,前   英国   殖民地   和   殖民地,0.0075,3,地点与地理（Location）
+in,30,输入,0.0073,9,其他（Others）
+it,30,这个,0.0073,9,其他（Others）
 jp,30,jp (帮助),0.0073,,
-abcbirds,30,鸟类,0.0073,,
-abh_city,30,abh 城市(城市),0.0073,,
+abcbirds,30,鸟类,0.0073,1,人物与生命（Person & Life）
+abh_city,30,abh 城市(城市),0.0073,3,地点与地理（Location）
 cheunger,30,厨师,0.0073,,
 sfawards,30,沙发,0.0073,,
 hsisjason,30,希西贾森语Name,0.0073,,
-real_place,30,实际位置,0.0073,,
-crime_victim,30,犯罪 受害人,0.0073,,
-noble_person,30,高级人物,0.0073,,
-shapedcities,30,形状城市,0.0073,,
-nitromaster101,30,硝化炉101,0.0073,,
-school_category,30,学校类别,0.0073,,
-world_cup_squad,30,世界( C),0.0073,,
+real_place,30,实际位置,0.0073,3,地点与地理（Location）
+crime_victim,30,犯罪 受害人,0.0073,1,人物与生命（Person & Life）
+noble_person,30,高级人物,0.0073,1,人物与生命（Person & Life）
+shapedcities,30,形状城市,0.0073,8,属性与度量（Attribute & Measurement）
+nitromaster101,30,硝化炉101,0.0073,1,人物与生命（Person & Life）
+school_category,30,学校类别,0.0073,8,属性与度量（Attribute & Measurement）
+world_cup_squad,30,世界( C),0.0073,8,属性与度量（Attribute & Measurement）
 datedlocationtest,30,日期定位测试,0.0073,,
-government_agency,30,政府机构,0.0073,,
-onlineadvertising,30,在线广告,0.0073,,
-radio_station_owner,30,电台 站台 所有者,0.0073,,
-jewish_studies_field,30,犹太语  研究  field,0.0073,,
-sports_championship_event,30,运动( C),0.0073,,
-ncaa_basketball_tournament,30,ncaa 篮球 进球,0.0073,,
-national_basketball_association_team,30,国家 篮球 协会 团队,0.0073,,
-chess,29,象棋,0.007,,
-skills,29,技能,0.007,,
-authors,29,作者,0.007,,
-reviewed_topic,29,审查的专题,0.007,,
-fishery_location,29,渔场位置,0.007,,
-court_jurisdiction_area,29,法院 管辖权 区域,0.007,,
+government_agency,30,政府机构,0.0073,2,组织与机构（Organization）
+onlineadvertising,30,在线广告,0.0073,7,物品与产品（Product & Object）
+radio_station_owner,30,电台 站台 所有者,0.0073,1,人物与生命（Person & Life）
+jewish_studies_field,30,犹太语  研究  field,0.0073,6,学科与概念（Concept & Subject）
+sports_championship_event,30,运动( C),0.0073,5,事件与活动（Event）
+ncaa_basketball_tournament,30,ncaa 篮球 进球,0.0073,5,事件与活动（Event）
+national_basketball_association_team,30,国家 篮球 协会 团队,0.0073,2,组织与机构（Organization）
+chess,29,象棋,0.007,7,物品与产品（Product & Object）
+skills,29,技能,0.007,8,属性与度量（Attribute & Measurement）
+authors,29,作者,0.007,1,人物与生命（Person & Life）
+reviewed_topic,29,审查的专题,0.007,6,学科与概念（Concept & Subject）
+fishery_location,29,渔场位置,0.007,3,地点与地理（Location）
+court_jurisdiction_area,29,法院 管辖权 区域,0.007,3,地点与地理（Location）
 embassies_and_consulates,29,使馆( A),0.007,,
-aliens,28,外国人,0.0068,,
+aliens,28,外国人,0.0068,1,人物与生命（Person & Life）
 animanga,28,阿尼曼加语Name,0.0068,,
-invention,28,发明,0.0068,,
+invention,28,发明,0.0068,7,物品与产品（Product & Object）
 vancouver,28,范库弗,0.0068,,
 thadguidry,28,红色,0.0068,,
-product_theme,28,产品 主题,0.0068,,
-unitednations,28,联合,0.0068,,
+product_theme,28,产品 主题,0.0068,4,创作与娱乐作品（Creative Work）
+unitednations,28,联合,0.0068,8,属性与度量（Attribute & Measurement）
 indianelections,28,印第安人选举,0.0068,,
-publishing_company,28,发布  公司,0.0068,,
-internet_video_actor,28,互联网 视频 演员,0.0068,,
-ufo_sighting_location,28,视点 位置,0.0068,,
-world_cup_participant,28,世界语   cup  参与者,0.0068,,
-non_metropolitan_district,28,非大都会  区,0.0068,,
-uk_non_metropolitan_district,28,uk not metropolitan district (中文(简体) ).,0.0068,,
+publishing_company,28,发布  公司,0.0068,2,组织与机构（Organization）
+internet_video_actor,28,互联网 视频 演员,0.0068,1,人物与生命（Person & Life）
+ufo_sighting_location,28,视点 位置,0.0068,3,地点与地理（Location）
+world_cup_participant,28,世界语   cup  参与者,0.0068,1,人物与生命（Person & Life）
+non_metropolitan_district,28,非大都会  区,0.0068,3,地点与地理（Location）
+uk_non_metropolitan_district,28,uk not metropolitan district (中文(简体) ).,0.0068,3,地点与地理（Location）
 mmmpr,27,毫米pr,0.0066,,
-science,27,科学,0.0066,,
+science,27,科学,0.0066,6,学科与概念（Concept & Subject）
 sharing,27,共享,0.0066,,
-chess_player,27,围棋玩家,0.0066,,
+chess_player,27,围棋玩家,0.0066,1,人物与生命（Person & Life）
 film_character,27,胶片( C),0.0066,,
-tv_station_owner,27,tv 站点 所有者,0.0066,,
-business_location,27,商务( L),0.0066,,
-sports_team_owner,27,运动   团队  拥有者,0.0066,,
-educational_degree,27,学历,0.0066,,
+tv_station_owner,27,tv 站点 所有者,0.0066,1,人物与生命（Person & Life）
+business_location,27,商务( L),0.0066,3,地点与地理（Location）
+sports_team_owner,27,运动   团队  拥有者,0.0066,1,人物与生命（Person & Life）
+educational_degree,27,学历,0.0066,8,属性与度量（Attribute & Measurement）
 creativemindsatwork,27,创意卫星工作,0.0066,,
-organization_partnership,27,组织-伙伴关系,0.0066,,
-surprisingly_tall_people,27,令人惊讶的 Tall people,0.0066,,
-melbourneinternationalfilmfestival,27,国际电影节,0.0066,,
+organization_partnership,27,组织-伙伴关系,0.0066,8,属性与度量（Attribute & Measurement）
+surprisingly_tall_people,27,令人惊讶的 Tall people,0.0066,1,人物与生命（Person & Life）
+melbourneinternationalfilmfestival,27,国际电影节,0.0066,5,事件与活动（Event）
 nl,26,无,0.0063,,
-family,26,家庭,0.0063,,
+family,26,家庭,0.0063,6,学科与概念（Concept & Subject）
 obamabase,26,奥巴马基地,0.0063,,
 scubadiving,26,恶作剧,0.0063,,
-songwriters,26,作曲家,0.0063,,
+songwriters,26,作曲家,0.0063,1,人物与生命（Person & Life）
 thebigpitch,26,大块头,0.0063,,
 thesocialset,26,社会集,0.0063,,
 uk_civil_parish,26,uk 民用   parish,0.0063,,
-exhibition_sponsor,26,展览( P),0.0063,,
-infectious_disease,26,传染性疾病,0.0063,,
-olympic_bidding_city,26,奥林匹克  投标  城市,0.0063,,
+exhibition_sponsor,26,展览( P),0.0063,2,组织与机构（Organization）
+infectious_disease,26,传染性疾病,0.0063,6,学科与概念（Concept & Subject）
+olympic_bidding_city,26,奥林匹克  投标  城市,0.0063,3,地点与地理（Location）
 uk_unitary_authority,26,uk  统一处理法 权威,0.0063,,
 notable_author_of_a_lit_movement,26,注意( A),0.0063,,
 mt,25,吨数,0.0061,,
-subject,25,主题,0.0061,,
-customer,25,客户,0.0061,,
+subject,25,主题,0.0061,6,学科与概念（Concept & Subject）
+customer,25,客户,0.0061,1,人物与生命（Person & Life）
 edgarpoe,25,编辑,0.0061,,
 splitter,25,分隔符,0.0061,,
 cityscape,25,城市风景,0.0061,,
-pixarfilms,25,像素胶片,0.0061,,
-casino_theme,25,赌场主题,0.0061,,
-northcarolina,25,北卡罗琳娜州,0.0061,,
+pixarfilms,25,像素胶片,0.0061,7,物品与产品（Product & Object）
+casino_theme,25,赌场主题,0.0061,4,创作与娱乐作品（Creative Work）
+northcarolina,25,北卡罗琳娜州,0.0061,3,地点与地理（Location）
 postneolithic,25,后石学,0.0061,,
 endofallthings,25,一切的尽头,0.0061,,
 school_subject,25,学校 学科,0.0061,,
 split_completed,25,拆分( 已完成),0.0061,,
 compositional_form,25,组成( F),0.0061,,
-conference_subject,25,会议 主题,0.0061,,
+conference_subject,25,会议 主题,0.0061,6,学科与概念（Concept & Subject）
 disputed_location_claimant,25,有争议的位置( C),0.0061,,
 government_office_category,25,政府 办公室 类别,0.0061,,
 aptamer,24,贴纸,0.0058,,
@@ -2746,7 +2746,7 @@ type_of_motivation,2,类型( M),0.0005,,
 uk_listed_building,2,uk list 构建,0.0005,,
 varunksood_hollard,2,瓦伦克苏德-霍拉德,0.0005,,
 visual_art_support,2,视觉   艺术  支持,0.0005,,
-annotation_category,2,注释  类别,0.0005,8,属性与度量（Attribute & Measurement）
+annotation_category,2,注释  类别,0.0005,6,学科与概念（Concept & Subject）
 chineseuniversities,2,中国大学,0.0005,,
 computer_game_theme,2,计算机  游戏  主题,0.0005,,
 cryptid_alternative,2,密码( C),0.0005,,
@@ -2829,7 +2829,7 @@ ikariam_research_category,2,ikariam research 分类,0.0005,,
 music_video_choreographer,2,音乐   视频  编舞,0.0005,,
 mythology_origin_location,2,神话 起源 位置,0.0005,,
 road_bicycle_racing_event,2,road 自行车 赛车 活动,0.0005,,
-southernmedicaluniversity,2,南医科大学,0.0005,,
+southernmedicaluniversity,2,南医科大学,1.0005,2,组织与机构（Organization）
 unit_of_population_number,2,单位 人口 数量,0.0005,,
 construction_services_type,2,构造 服务 类型,0.0005,,
 data_recovery_service_type,2,数据 恢复 服务 类型,0.0005,,
@@ -3270,7 +3270,7 @@ surf_film,1,冲浪 电影,0.0002,,
 test_type,1,测试 类型,0.0002,,
 testcards,1,测试卡,0.0002,,
 tmv112233,1,tmv112233 (中文(简体) ).,0.0002,,
-tullamore,1,摇篮曲,0.0002,4,创作与娱乐作品（Creative Work）
+tullamore,1,摇篮曲,0.0002,,
 typetest8,1,类型测试8,0.0002,,
 typetest9,1,类型测试9,0.0002,,
 uk_region,1,uk 区域,0.0002,,

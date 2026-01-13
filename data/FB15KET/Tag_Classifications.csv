@@ -1,5 +1,5 @@
 Tag,出现次数,中文描述,权重,类别,类别名称
-base,45884,基础,0.06,6,学科与概念（Concept & Subject）
+base,45884,基础,0.16,6,学科与概念（Concept & Subject）
 topic,24357,专题,0.506,6,学科与概念（Concept & Subject）
 film,18715,胶片,4.5475,4,创作与娱乐作品（Creative Work）
 location,17935,地点,4.358,3,地点与地理（Location）
@@ -88,7 +88,7 @@ allthingsnewyork,835,"所有东西,纽约克",0.2029,3,地点与地理（Locatio
 tv_producer,828,tv 生产者,0.2012,2,组织与机构（Organization）
 academyawards,781,学士学位,0.1898,6,学科与概念（Concept & Subject）
 governmental_jurisdiction,777,政府管辖权,0.1888,6,学科与概念（Concept & Subject）
-educational_institution,764,教育机构,0.1856,2,组织与机构（Organization）
+educational_institution,764,教育机构,1.856,2,组织与机构（Organization）
 tv_program_guest,750,tv program 客户端,0.1822,7,物品与产品（Product & Object）
 organization_founder,744,组织创建者,0.1808,1,人物与生命（Person & Life）
 business_operation,723,运营,0.1757,5,事件与活动（Event）
@@ -97,7 +97,7 @@ skosbase,718,skosbase (英语).,0.1745,3,地点与地理（Location）
 music_contributor,707,音乐( C),0.1718,1,人物与生命（Person & Life）
 sports_team_location,688,运动   团队  位置,1.1672,3,地点与地理（Location）
 film_story_contributor,671,胶片 故事 贡献者,0.163,1,人物与生命（Person & Life）
-educational_institution_campus,669,教育 机构 校园,0.1626,2,组织与机构（Organization）
+educational_institution_campus,669,教育 机构 校园,2.1626,2,组织与机构（Organization）
 capital_of_administrative_division,636,首府 行政区划,0.1545,2,组织与机构（Organization）
 theater_actor,612,剧场( A),0.1487,1,人物与生命（Person & Life）
 person_extra,603,外部单词,0.1465,1,人物与生命（Person & Life）
@@ -115,9 +115,9 @@ endowed_organization,556,赋予组织( O),0.1351,2,组织与机构（Organizatio
 tv_program_creator,553,tv 程序创建器,0.1344,1,人物与生命（Person & Life）
 earth,538,土质,0.1307,7,物品与产品（Product & Object）
 random,525,随机,0.1276,6,学科与概念（Concept & Subject）
-genre,518,流派,0.1259,6,学科与概念（Concept & Subject）
+genre,518,流派,1.559,6,学科与概念（Concept & Subject）
 locations,510,地点,0.1239,3,地点与地理（Location）
-event,505,事件,0.1227,5,事件与活动（Event）
+event,505,事件,2.8227,5,事件与活动（Event）
 taxonomy_subject,498,分类学 主题,0.121,6,学科与概念（Concept & Subject）
 organization_member,494,组织( 成员),0.12,1,人物与生命（Person & Life）
 county,490,县,0.1191,3,地点与地理（Location）
@@ -133,7 +133,7 @@ food,403,粮食,0.0979,7,物品与产品（Product & Object）
 time,399,时间,0.097,8,属性与度量（Attribute & Measurement）
 summermovies2009,392,2009年夏季活动,0.0953,5,事件与活动（Event）
 snl_host,375,显示主机( H),0.0911,7,物品与产品（Product & Object）
-vocabulary_equivalent_topic,361,词汇表 等同 主题,0.0877,7,物品与产品（Product & Object）
+vocabulary_equivalent_topic,361,词汇表 等同 主题,0.8877,6,学科与概念（Concept & Subject）
 architecture,359,结构,0.0872,8,属性与度量（Attribute & Measurement）
 fictional_character_creator,349,虚构的( C),0.0848,1,人物与生命（Person & Life）
 eating,343,吃饭,0.0833,5,事件与活动（Event）
@@ -145,7 +145,7 @@ jewlib,323,犹太人,0.0785,1,人物与生命（Person & Life）
 royalty,318,特许权使用费,0.0773,2,组织与机构（Organization）
 activism,311,行动主义,0.0756,6,学科与概念（Concept & Subject）
 flag_referent,311,旗标( R),0.0756,7,物品与产品（Product & Object）
-educational_institution_extra,307,教育   机构  外部,0.0746,2,组织与机构（Organization）
+educational_institution_extra,307,教育   机构  外部,1.746,2,组织与机构（Organization）
 academia,302,学术界,0.0734,6,学科与概念（Concept & Subject）
 person_in_fiction,297,人物小说,0.0722,1,人物与生命（Person & Life）
 berlininternationalfilmfestival,295,国际电影节,0.0717,5,事件与活动（Event）
@@ -249,7 +249,7 @@ atheist,152,无神论者,0.0369,1,人物与生命（Person & Life）
 de,151,页:1,0.0367,8,属性与度量（Attribute & Measurement）
 markrobertdaveyphotographer,150,马克罗伯特达维摄影师,0.0364,1,人物与生命（Person & Life）
 politician,149,政治家,0.0362,1,人物与生命（Person & Life）
-award_ceremony,149,授奖仪式( C),0.0362,4,创作与娱乐作品（Creative Work）
+award_ceremony,149,授奖仪式( C),0.5362,5,事件与活动（Event）
 non_profit_extra,149,非盈利性,0.0362,8,属性与度量（Attribute & Measurement）
 person_sign,148,符号( S),0.036,6,学科与概念（Concept & Subject）
 architectural_structure_owner,148,架构 结构 所有者,0.036,1,人物与生命（Person & Life）
@@ -270,7 +270,7 @@ american_football,128,美国小球,0.0311,7,物品与产品（Product & Object�
 alexbl,124,亚历山大,0.0301,1,人物与生命（Person & Life）
 honorary_title,123,荣誉( T),0.0299,7,物品与产品（Product & Object）
 state,120,状态,0.0292,8,属性与度量（Attribute & Measurement）
-instrument,120,文书,0.0292,7,物品与产品（Product & Object）
+instrument,120,文书,0.5292,7,物品与产品（Product & Object）
 production_company,120,生产 公司,0.0292,2,组织与机构（Organization）
 disaster2,118,灾害2,0.0287,4,创作与娱乐作品（Creative Work）
 periodical_subject,118,常规 主题,0.0287,6,学科与概念（Concept & Subject）
@@ -349,10 +349,10 @@ job_title,77,任务( T),0.0187,6,学科与概念（Concept & Subject）
 fashionmodels,77,时装模特,0.0187,1,人物与生命（Person & Life）
 athletics,76,田径,0.0185,1,人物与生命（Person & Life）
 task,75,任务,0.0182,6,学科与概念（Concept & Subject）
-culturalevent,75,文化活动,0.0182,5,事件与活动（Event）
+culturalevent,75,文化活动,0.9182,5,事件与活动（Event）
 fight,74,战斗,0.018,5,事件与活动（Event）
 sport,74,运动,0.018,5,事件与活动（Event）
-military_conflict,74,军事-冲突,0.018,5,事件与活动（Event）
+military_conflict,74,军事-冲突,0.918,5,事件与活动（Event）
 surprisingheights,74,惊人的脚步,0.018,6,学科与概念（Concept & Subject）
 engineer,73,工程师,0.0177,1,人物与生命（Person & Life）
 rosenbaum,73,罗森鲍姆,0.0177,1,人物与生命（Person & Life）
@@ -497,7 +497,7 @@ housemd,47,户籍,0.0114,1,人物与生命（Person & Life）
 film_set_designer,47,胶片 set 设计器,0.0114,1,人物与生命（Person & Life）
 project_participant,47,项目 参与者,0.0114,1,人物与生命（Person & Life）
 music_video_performer,47,音乐 video performer,0.0114,1,人物与生命（Person & Life）
-school,46,学校,0.0112,2,组织与机构（Organization）
+school,46,学校,0.9112,2,组织与机构（Organization）
 librettist,46,自由主义,0.0112,6,学科与概念（Concept & Subject）
 the_27_club,46,27 俱乐部,0.0112,3,地点与地理（Location）
 jamesbond007,46,贾梅斯邦007,0.0112,4,创作与娱乐作品（Creative Work）
@@ -520,7 +520,7 @@ company,43,企业,0.0104,2,组织与机构（Organization）
 content,43,内容,0.0104,6,学科与概念（Concept & Subject）
 named_person,43,名称( P),0.0104,1,人物与生命（Person & Life）
 pastusobrown,43,面额,0.0104,1,人物与生命（Person & Life）
-olympic_games,43,奥林匹克游戏,0.0104,5,事件与活动（Event）
+olympic_games,43,奥林匹克游戏,1.104,5,事件与活动（Event）
 thoroughbredracing,43,彻底绘制,0.0104,5,事件与活动（Event）
 tourist_attraction,43,游客( T),0.0104,8,属性与度量（Attribute & Measurement）
 bipolar_disorder_sufferer,43,双极体( D),0.0104,9,其他（Others）
@@ -563,7 +563,7 @@ art_owner,38,艺术拥有者,0.0092,1,人物与生命（Person & Life）
 pethealth,38,宠物保健,0.0092,,
 cvg_designer,38,cvg 设计器,0.0092,1,人物与生命（Person & Life）
 municipality,38,市镇,0.0092,3,地点与地理（Location）
-tv_character,38,tv 特性,0.0092,8,属性与度量（Attribute & Measurement）
+tv_character,38,tv 特性,1.0092,1,人物与生命（Person & Life）
 twinnedtowns,38,双胞胎城镇,0.0092,3,地点与地理（Location）
 aircraft_owner,38,飞机拥有者,0.0092,1,人物与生命（Person & Life）
 greek_loanword,38,希腊语  借词,0.0092,,
@@ -633,7 +633,7 @@ dedicated_work,32,专用( W),0.0078,,
 newspaper_owner,32,报纸所有者( O),0.0078,1,人物与生命（Person & Life）
 olympic_host_city,32,奥林匹克 东道主 城市,0.0078,3,地点与地理（Location）
 school_in_fiction,32,学校 小说,0.0078,2,组织与机构（Organization）
-fictional_character,32,虚构( C),0.0078,1,人物与生命（Person & Life）
+fictional_character,32,虚构( C),0.6078,1,人物与生命（Person & Life）
 bisac,31,双子,0.0075,,
 tvepg,31,视频,0.0075,,
 ballet,31,芭蕾舞团,0.0075,5,事件与活动（Event）
@@ -704,8 +704,8 @@ uk_non_metropolitan_district,28,uk not metropolitan district (中文(简体) ).,
 mmmpr,27,毫米pr,0.0066,,
 science,27,科学,0.0066,6,学科与概念（Concept & Subject）
 sharing,27,共享,0.0066,,
-chess_player,27,围棋玩家,0.0066,1,人物与生命（Person & Life）
-film_character,27,胶片( C),0.0066,,
+chess_player,27,围棋玩家,1.0066,1,人物与生命（Person & Life）
+film_character,27,胶片( C),0.6066,1,人物与生命（Person & Life）
 tv_station_owner,27,tv 站点 所有者,0.0066,1,人物与生命（Person & Life）
 business_location,27,商务( L),0.0066,3,地点与地理（Location）
 sports_team_owner,27,运动   团队  拥有者,0.0066,1,人物与生命（Person & Life）
@@ -2233,8 +2233,8 @@ award_category_extra,3,授予 类别 外部,0.0007,,
 extended_institution,3,扩展机构( I),0.0007,,
 mobile_phone_carrier,3,移动电话   载体,0.0007,,
 semantichistoryofart,3,长篇小说,0.0007,,
-trypanophobic_person,3,切换恐惧( P),0.0007,,
-computer_crime_victim,3,计算机 犯罪 受害人,0.0007,,
+trypanophobic_person,3,切换恐惧( P),0.9007,1,人物与生命（Person & Life）
+computer_crime_victim,3,计算机 犯罪 受害人,0.9007,1,人物与生命（Person & Life）
 favorite_sports_teams,3,最喜欢的   运动  团队,0.0007,,
 football_team_manager,3,足球   团队  管理器,0.0007,,
 informationtechnology,3,信息技术,0.0007,,

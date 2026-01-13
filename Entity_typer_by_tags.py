@@ -265,7 +265,8 @@ def main():
             f"平均置信度: {sum(r['confidence_score'] for r in results if r['predicted_category']) / (total_classified if total_classified > 0 else 1):.3f}")
 
     # 显示示例
-    if results:
+    #if results:
+    if 0:
         print(f"\n前5个实体预测示例:")
         displayed = 0
         for result in results:

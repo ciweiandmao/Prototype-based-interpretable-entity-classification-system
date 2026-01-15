@@ -57,42 +57,72 @@ def load_tag_classifications(classification_file):
     return tag_data
 
 
-def predict_entity_category(entity_tags, tag_data):
-    """根据实体包含的tag预测实体类别"""
+def predict_entity_category(entity_tags, tag_data, allow_duplicates=True):
+    """根据实体包含的tag预测实体类别
+
+    Args:
+        entity_tags: 实体的tag列表
+        tag_data: tag分类数据
+        allow_duplicates: 是否允许重复计算相同tag，默认True（重复计算）
+    """
     if not entity_tags:
         return None, None, 0.0, {}
 
     category_scores = defaultdict(float)
-    all_basic_tags = set()
-    matched_tags = []
+
+    # 统计每个tag的出现次数（如果允许重复）
+    if allow_duplicates:
+        tag_counter = Counter()
+        tag_list = []  # 保留所有tag（包括重复的）
+    else:
+        tag_set = set()  # 去重
 
     for composite_tag in entity_tags:
         if not composite_tag:
             continue
 
+        # 移除开头的斜杠
         if composite_tag.startswith('/'):
             composite_tag = composite_tag[1:]
 
+        # 分割路径为基本tag
         segments = composite_tag.split('/')
         for segment in segments:
             if segment:
-                all_basic_tags.add(segment)
+                if allow_duplicates:
+                    tag_counter[segment] += 1
+                    tag_list.append(segment)
+                else:
+                    tag_set.add(segment)
 
-    print(f"从实体提取的基本tag: {list(all_basic_tags)[:10]}...")  # 显示前10个
-    print(f"tag_data中的已知tag: {list(tag_data.keys())[:10]}...")  # 显示前10个
+    if allow_duplicates:
+        if not tag_counter:
+            return None, None, 0.0, {}
+        print(f"tag出现次数统计: {dict(tag_counter.most_common(10))}")
+    else:
+        if not tag_set:
+            return None, None, 0.0, {}
+        print(f"去重后的基本tag: {list(tag_set)[:10]}...")
 
-    for tag in all_basic_tags:
-        if tag in tag_data:
-            matched_tags.append(tag)
-            category = tag_data[tag]['category']
-            weight = tag_data[tag]['weight']
-            score = math.log(weight + 1) if weight > 0 else 1.0
-            category_scores[category] += score
-
-    print(f"成功匹配的tag: {matched_tags}")
-    print(f"匹配到的类别得分: {dict(category_scores)}")
-
-    # ... 其余代码不变 ...
+    # 计算每个类别的加权得分
+    if allow_duplicates:
+        # 按出现次数重复计算
+        for tag, count in tag_counter.items():
+            if tag in tag_data:
+                category = tag_data[tag]['category']
+                weight = tag_data[tag]['weight']
+                # 计算基础得分，然后乘以出现次数
+                base_score = math.log(weight + 1) if weight > 0 else 1.0
+                total_score = base_score * count  # 乘以出现次数
+                category_scores[category] += total_score
+    else:
+        # 原始逻辑：每个tag只计算一次
+        for tag in tag_set:
+            if tag in tag_data:
+                category = tag_data[tag]['category']
+                weight = tag_data[tag]['weight']
+                score = math.log(weight + 1) if weight > 0 else 1.0
+                category_scores[category] += score
 
     if not category_scores:
         return None, None, 0.0, {}
@@ -104,7 +134,12 @@ def predict_entity_category(entity_tags, tag_data):
 
     # 获取类别名称
     category_name = None
-    for tag in all_basic_tags:
+    if allow_duplicates:
+        checked_tags = set(tag_counter.keys())
+    else:
+        checked_tags = tag_set
+
+    for tag in checked_tags:
         if tag in tag_data and tag_data[tag]['category'] == category_num:
             category_name = tag_data[tag]['category_name']
             break
@@ -116,8 +151,15 @@ def predict_entity_category(entity_tags, tag_data):
     return category_num, category_name, confidence, category_scores
 
 
-def process_entities(entity_file, tag_data, output_file):
-    """处理所有实体，预测类别"""
+def process_entities(entity_file, tag_data, output_file, allow_duplicates=True):
+    """处理所有实体，预测类别
+
+    Args:
+        entity_file: 实体文件路径
+        tag_data: tag分类数据
+        output_file: 输出文件路径
+        allow_duplicates: 是否允许重复计算相同tag，默认True
+    """
     results = []
     classification_stats = Counter()
 
@@ -137,9 +179,11 @@ def process_entities(entity_file, tag_data, output_file):
 
                 tags = tags_str.split('|') if tags_str else []
 
-                # 预测类别
-                category, category_name, confidence, all_scores = predict_entity_category(tags, tag_data)
-
+                # 预测类别（传入allow_duplicates参数）
+                category, category_name, confidence, all_scores = predict_entity_category(
+                    tags, tag_data, allow_duplicates
+                )
+                # ... 其余代码不变 ...
                 # 准备结果行
                 result = {
                     'entity_id': entity_id,
@@ -228,8 +272,13 @@ def main():
         print("警告: 未找到已分类的tag数据!")
         return
 
+    # 控制是否重复计算相同tag
+    ALLOW_DUPLICATE_TAGS = True  # 设置为True以重复计算
     # 处理实体
-    results, stats = process_entities(entity_file, tag_data, output_file)
+    results, stats = process_entities(
+        entity_file, tag_data, output_file,
+        allow_duplicates=ALLOW_DUPLICATE_TAGS
+    )
 
     print(f"\n结果已保存到: {output_file}")
 
@@ -243,7 +292,7 @@ def main():
         total_classified = sum(stats.values())
 
         category_names = {
-            1: "人物（Person）",
+            1: "人物和生命（Person & Life）",
             2: "组织与机构（Organization）",
             3: "地点与地理（Location）",
             4: "创作与娱乐作品（Creative Work）",

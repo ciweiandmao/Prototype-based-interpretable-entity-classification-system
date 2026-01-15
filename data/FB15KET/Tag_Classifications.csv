@@ -1,11 +1,11 @@
 Tag,出现次数,中文描述,权重,类别,类别名称
-base,45884,基础,0.16,6,学科与概念（Concept & Subject）
-topic,24357,专题,0.506,6,学科与概念（Concept & Subject）
-film,18715,胶片,4.5475,4,创作与娱乐作品（Creative Work）
-location,17935,地点,4.358,3,地点与地理（Location）
+base,45884,基础,0.26,6,学科与概念（Concept & Subject）
+topic,24357,专题,0.556,6,学科与概念（Concept & Subject）
+film,18715,胶片,1.575,4,创作与娱乐作品（Creative Work）
+location,17935,地点,3.358,3,地点与地理（Location）
 award,14202,裁决,0.0509,4,创作与娱乐作品（Creative Work）
 people,12021,人员,2.9209,1,人物与生命（Person & Life）
-user,11601,用户,2.8189,1,人物与生命（Person & Life）
+user,11601,用户,1.8189,1,人物与生命（Person & Life）
 tv,8252,电视,2.0051,7,物品与产品（Product & Object）
 music,7737,音乐,1.88,4,创作与娱乐作品（Creative Work）
 organization,5935,组织,2.9421,2,组织与机构（Organization）
@@ -13,7 +13,7 @@ narphorium,5104,ium,1.2402,7,物品与产品（Product & Object）
 schemastaging,4771,计划,1.1593,7,物品与产品（Product & Object）
 person,4642,人员,2.1279,1,人物与生命（Person & Life）
 popstra,4370,流行音乐,1.0619,4,创作与娱乐作品（Creative Work）
-book,4242,书本,3.0307,4,创作与娱乐作品（Creative Work）
+book,4242,书本,2.9607,4,创作与娱乐作品（Creative Work）
 media_common,4163,媒体  常见,1.0116,4,创作与娱乐作品（Creative Work）
 award_nominee,4084,授予( N),2.9924,1,人物与生命（Person & Life）
 award_winner,3599,获奖者( W),2.5745,1,人物与生命（Person & Life）
@@ -23,14 +23,14 @@ aareas,3409,a 区域,0.8283,3,地点与地理（Location）
 schema,3375,计划,0.8201,7,物品与产品（Product & Object）
 tv_actor,3130,tv 显示器,3.7605,1,人物与生命（Person & Life）
 default_domain,3084,默认区域,0.7494,3,地点与地理（Location）
-artist,3023,艺术家,0.7345,1,人物与生命（Person & Life）
-person_or_entity_appearing_in_film,2933,个人 或实体 出现 在 电影,0.7127,1,人物与生命（Person & Life）
+artist,3023,艺术家,1.7345,1,人物与生命（Person & Life）
+person_or_entity_appearing_in_film,2933,个人 或实体 出现 在 电影,0.9127,1,人物与生命（Person & Life）
 influence,2716,影响,0.66,6,学科与概念（Concept & Subject）
 influence_node,2716,影响( Node),0.66,6,学科与概念（Concept & Subject）
 education,2631,学历,0.6393,8,属性与度量（Attribute & Measurement）
 sports,2567,运动,0.6237,5,事件与活动（Event）
 nndb_person,2446,nndb 个人,0.5943,1,人物与生命（Person & Life）
-ontologies,2421,肿瘤,0.9883,6,学科与概念（Concept & Subject）
+ontologies,2421,肿瘤,1.3883,6,学科与概念（Concept & Subject）
 statistical_region,2408,统计 区域,0.5851,3,地点与地理（Location）
 dated_location,2398,日期( L),0.5827,3,地点与地理（Location）
 ontology_instance,2380,肿瘤学( N),1.783,6,学科与概念（Concept & Subject）
@@ -41,7 +41,7 @@ award_nominated_work,1980,获奖 提名 工作,0.4811,4,创作与娱乐作品（
 ranked_item,1932,排序( R),0.4695,7,物品与产品（Product & Object）
 netflix_title,1927,净flix 标题,0.4682,4,创作与娱乐作品（Creative Work）
 employer,1807,雇主,0.4391,1,人物与生命（Person & Life）
-citytown,1632,城镇,0.3966,3,地点与地理（Location）
+citytown,1632,城镇,0.4966,3,地点与地理（Location）
 fictional_universe,1610,虚构单向,0.3912,4,创作与娱乐作品（Creative Work）
 award_winning_work,1565,获奖  工作,0.3803,4,创作与娱乐作品（Creative Work）
 administrative_area,1551,行政区域,0.3769,3,地点与地理（Location）
@@ -57,12 +57,12 @@ tagit,1355,标签,0.3292,6,学科与概念（Concept & Subject）
 broadcast,1306,广播,0.3173,4,创作与娱乐作品（Creative Work）
 saturdaynightlive,1272,周六夜间生活,0.3091,4,创作与娱乐作品（Creative Work）
 administrative_division,1237,行政区划,0.3006,3,地点与地理（Location）
-writer,1236,编剧,0.3003,1,人物与生命（Person & Life）
+writer,1236,编剧,1.5003,1,人物与生命（Person & Life）
 deceased_person,1182,已死亡人员,0.2872,1,人物与生命（Person & Life）
 military,1168,军事,0.2838,6,学科与概念（Concept & Subject）
 americancomedy,1161,美国喜剧,0.2821,4,创作与娱乐作品（Creative Work）
 robert,1151,罗伯特,0.2797,1,人物与生命（Person & Life）
-director,1142,导演,0.2775,1,人物与生命（Person & Life）
+director,1142,导演,1.2775,1,人物与生命（Person & Life）
 internet,1092,互联网,0.2653,6,学科与概念（Concept & Subject）
 symbols,1084,符号,0.2634,6,学科与概念（Concept & Subject）
 theater,1074,剧场,0.261,3,地点与地理（Location）
@@ -71,13 +71,13 @@ concept,1025,概念,3.2491,6,学科与概念（Concept & Subject）
 sports_team,1003,运动团队,2.2437,2,组织与机构（Organization）
 alust,984,忧郁,0.2391,9,其他（Others）
 processed_with_review_queue,984,已处理( W),0.2391,7,物品与产品（Product & Object）
-hud_foreclosure_area,973,屏蔽  取消赎回  区域,0.2364,3,地点与地理（Location）
+hud_foreclosure_area,973,屏蔽  取消赎回  区域,0.3364,3,地点与地理（Location）
 travel_destination,967,旅行( 目的地),0.235,3,地点与地理（Location）
 tv_personality,955,tv 个性,0.2321,4,创作与娱乐作品（Creative Work）
 bibs_location,910,bibs 位置( L),0.2211,3,地点与地理（Location）
-composer,904,编曲,0.2197,1,人物与生命（Person & Life）
+composer,904,编曲,1.2197,1,人物与生命（Person & Life）
 adaptation,902,适应,0.2192,4,创作与娱乐作品（Creative Work）
-social_network_user,890,社会 网络 用户,0.2163,1,人物与生命（Person & Life）
+social_network_user,890,社会 网络 用户,0.5163,1,人物与生命（Person & Life）
 context_name,873,上下文名称,0.2121,6,学科与概念（Concept & Subject）
 medicine,861,药,0.2092,7,物品与产品（Product & Object）
 celebrities,857,名人间,0.2082,8,属性与度量（Attribute & Measurement）
@@ -85,26 +85,26 @@ sports_team_extra,854,运动( T),1.2075,2,组织与机构（Organization）
 soccer,849,足球,0.2063,7,物品与产品（Product & Object）
 football_team,847,足球队,2.2058,2,组织与机构（Organization）
 allthingsnewyork,835,"所有东西,纽约克",0.2029,3,地点与地理（Location）
-tv_producer,828,tv 生产者,0.2012,2,组织与机构（Organization）
+tv_producer,828,tv 生产者,0.9012,2,组织与机构（Organization）
 academyawards,781,学士学位,0.1898,6,学科与概念（Concept & Subject）
 governmental_jurisdiction,777,政府管辖权,0.1888,6,学科与概念（Concept & Subject）
 educational_institution,764,教育机构,1.856,2,组织与机构（Organization）
-tv_program_guest,750,tv program 客户端,0.1822,7,物品与产品（Product & Object）
+tv_program_guest,750,tv program 客户端,0.9822,7,物品与产品（Product & Object）
 organization_founder,744,组织创建者,0.1808,1,人物与生命（Person & Life）
 business_operation,723,运营,0.1757,5,事件与活动（Event）
 university,719,大学,2.1747,2,组织与机构（Organization）
 skosbase,718,skosbase (英语).,0.1745,3,地点与地理（Location）
-music_contributor,707,音乐( C),0.1718,1,人物与生命（Person & Life）
+music_contributor,707,音乐( C),1.1718,1,人物与生命（Person & Life）
 sports_team_location,688,运动   团队  位置,1.1672,3,地点与地理（Location）
 film_story_contributor,671,胶片 故事 贡献者,0.163,1,人物与生命（Person & Life）
 educational_institution_campus,669,教育 机构 校园,2.1626,2,组织与机构（Organization）
 capital_of_administrative_division,636,首府 行政区划,0.1545,2,组织与机构（Organization）
 theater_actor,612,剧场( A),0.1487,1,人物与生命（Person & Life）
 person_extra,603,外部单词,0.1465,1,人物与生命（Person & Life）
-lyricist,600,语言学家,0.1458,1,人物与生命（Person & Life）
+lyricist,600,语言学家,1.1458,1,人物与生命（Person & Life）
 film_location,594,胶片位置( I),0.1443,3,地点与地理（Location）
 tv_writer,576,tv 写入器,0.14,1,人物与生命（Person & Life）
-hud_county_place,573,hud 县 地点,0.1392,3,地点与地理（Location）
+hud_county_place,573,hud 县 地点,0.2392,3,地点与地理（Location）
 film_subject,572,胶片 主题,0.139,4,创作与娱乐作品（Creative Work）
 tsegaran,571,锡加兰,0.1387,3,地点与地理（Location）
 bibs_topic,569,Bibs 专题,0.1383,4,创作与娱乐作品（Creative Work）
@@ -118,7 +118,7 @@ random,525,随机,0.1276,6,学科与概念（Concept & Subject）
 genre,518,流派,1.959,6,学科与概念（Concept & Subject）
 locations,510,地点,0.1239,3,地点与地理（Location）
 event,505,事件,2.8227,5,事件与活动（Event）
-taxonomy_subject,498,分类学 主题,0.121,6,学科与概念（Concept & Subject）
+taxonomy_subject,498,分类学 主题,0.621,6,学科与概念（Concept & Subject）
 organization_member,494,组织( 成员),0.12,1,人物与生命（Person & Life）
 county,490,县,0.1191,3,地点与地理（Location）
 award_category,488,裁决  类别,0.986,8,属性与度量（Attribute & Measurement）
@@ -190,12 +190,12 @@ consumermedical,212,消费者医疗,0.0515,6,学科与概念（Concept & Subject
 filmnoir,211,电影,0.0513,4,创作与娱乐作品（Creative Work）
 uncommon,209,不寻常,0.0508,8,属性与度量（Attribute & Measurement）
 quotation_subject,209,引号 主题,0.0508,6,学科与概念（Concept & Subject）
-disease,207,疾病,0.0503,6,学科与概念（Concept & Subject）
-place,206,地点,0.0501,3,地点与地理（Location）
+disease,207,疾病,0.703,6,学科与概念（Concept & Subject）
+place,206,地点,0.501,3,地点与地理（Location）
 musical_group,206,音乐小组合,0.0501,2,组织与机构（Organization）
-biology,205,生物学,0.0498,6,学科与概念（Concept & Subject）
+biology,205,生物学,1.0498,6,学科与概念（Concept & Subject）
 ovguide,203,光导,0.0493,6,学科与概念（Concept & Subject）
-organization_extra,203,外部组织( O),0.0493,2,组织与机构（Organization）
+organization_extra,203,外部组织( O),1.493,2,组织与机构（Organization）
 england,202,英格兰,0.0491,3,地点与地理（Location）
 adapted_work,200,适应工作( W),0.0486,4,创作与娱乐作品（Creative Work）
 services,198,服务,0.0481,5,事件与活动（Event）
@@ -225,12 +225,12 @@ religion,170,宗教,0.0413,6,学科与概念（Concept & Subject）
 aubreymaturin,170,奥布里马图林,0.0413,1,人物与生命（Person & Life）
 record_label,169,记录  标签,0.0411,7,物品与产品（Product & Object）
 professional_sports_team,169,专业   体育  团队,2.0411,2,组织与机构（Organization）
-film_genre,168,电影流派( G),0.2408,6,学科与概念（Concept & Subject）
+film_genre,168,电影流派( G),0.408,6,学科与概念（Concept & Subject）
 philosophy,168,哲学,0.0408,6,学科与概念（Concept & Subject）
 nobelprizes,168,无贝尔普雷兹,0.0408,5,事件与活动（Event）
-netflix_genre,168,净弗利克斯  流派,0.0408,4,创作与娱乐作品（Creative Work）
-editor,166,编辑器,0.0403,1,人物与生命（Person & Life）
-cinematographer,166,电影摄影师,0.0403,1,人物与生命（Person & Life）
+netflix_genre,168,净弗利克斯  流派,0.408,6,学科与概念（Concept & Subject）
+editor,166,编辑器,1.2403,1,人物与生命（Person & Life）
+cinematographer,166,电影摄影师,1.7403,1,人物与生命（Person & Life）
 x2010fifaworldcupsouthafrica,166,x2010fifaworldcup 南部非洲,0.0403,3,地点与地理（Location）
 yalebase,165,雅尔巴,0.0401,9,其他（Others）
 shce021709,165,schce021709 (英语).,0.0401,9,其他（Others）
@@ -239,7 +239,7 @@ art_subject,161,艺术 主题,0.0391,6,学科与概念（Concept & Subject）
 cinemainspector,161,电影监督员,0.0391,1,人物与生命（Person & Life）
 mystery,160,谜题,0.0389,7,物品与产品（Product & Object）
 equivalent_topic,160,等同主题,0.0389,8,属性与度量（Attribute & Measurement）
-tv_genre,157,tv 流派,0.0381,4,创作与娱乐作品（Creative Work）
+tv_genre,157,tv 流派,0.381,6,学科与概念（Concept & Subject）
 projects,156,项目,0.0379,7,物品与产品（Product & Object）
 practicer_of_diet,156,练习器( D),0.0379,7,物品与产品（Product & Object）
 organization_sector,155,组织部门,0.0377,2,组织与机构（Organization）
@@ -248,7 +248,7 @@ filmflexmovies,154,胶片胶片,0.0374,7,物品与产品（Product & Object）
 atheist,152,无神论者,0.0369,1,人物与生命（Person & Life）
 de,151,页:1,0.0367,8,属性与度量（Attribute & Measurement）
 markrobertdaveyphotographer,150,马克罗伯特达维摄影师,0.0364,1,人物与生命（Person & Life）
-politician,149,政治家,0.0362,1,人物与生命（Person & Life）
+politician,149,政治家,1.2362,1,人物与生命（Person & Life）
 award_ceremony,149,授奖仪式( C),0.5362,5,事件与活动（Event）
 non_profit_extra,149,非盈利性,0.0362,8,属性与度量（Attribute & Measurement）
 person_sign,148,符号( S),0.036,6,学科与概念（Concept & Subject）
@@ -265,7 +265,7 @@ dedication,133,奉献,0.0323,5,事件与活动（Event）
 performance_role,132,性能( R),0.0321,8,属性与度量（Attribute & Measurement）
 chivalric_order_member,131,骑士  命令  成员,0.0318,1,人物与生命（Person & Life）
 exhibition_subject,130,展览 主题,0.0316,6,学科与概念（Concept & Subject）
-literary_genre,129,文学流派,0.0313,4,创作与娱乐作品（Creative Work）
+literary_genre,129,文学流派,0.613,6,学科与概念（Concept & Subject）
 american_football,128,美国小球,0.0311,7,物品与产品（Product & Object）
 alexbl,124,亚历山大,0.0301,1,人物与生命（Person & Life）
 honorary_title,123,荣誉( T),0.0299,7,物品与产品（Product & Object）
@@ -299,7 +299,7 @@ ttiff,102,顶部,0.0248,9,其他（Others）
 region,102,区域,0.0248,3,地点与地理（Location）
 lewisandclark,102,蓝宝石,0.0248,5,事件与活动（Event）
 vancouver2010,102,梵库维2010年,0.0248,5,事件与活动（Event）
-film_distributor,101,胶片( D),0.0245,2,组织与机构（Organization）
+film_distributor,101,胶片( D),1.0245,2,组织与机构（Organization）
 cvg_developer,100,cvg 开发者,0.0243,1,人物与生命（Person & Life）
 musiteca,99,穆西特卡语Name,0.0241,7,物品与产品（Product & Object）
 risk_factor,99,风险因素,0.0241,8,属性与度量（Attribute & Measurement）
@@ -318,8 +318,8 @@ website_category,93,网站 类别,0.2226,8,属性与度量（Attribute & Measure
 comedy_group_member,93,喜剧 团体 成员,0.0226,1,人物与生命（Person & Life）
 diet_follower,92,饮食( F),0.0224,1,人物与生命（Person & Life）
 folklore,90,民间传说,0.0219,7,物品与产品（Product & Object）
-language,90,语言,0.0219,6,学科与概念（Concept & Subject）
-performer,89,表演者,0.0216,1,人物与生命（Person & Life）
+language,90,语言,1.0219,6,学科与概念（Concept & Subject）
+performer,89,表演者,0.9216,1,人物与生命（Person & Life）
 references,89,参考文献,0.0216,7,物品与产品（Product & Object）
 tv_network,89,tv 网络,0.0216,4,创作与娱乐作品（Creative Work）
 family_member,89,家族成员,0.0216,1,人物与生命（Person & Life）
@@ -389,16 +389,16 @@ rivalries,66,竞争,0.016,5,事件与活动（Event）
 visual_artist,66,视觉艺术家,0.016,1,人物与生命（Person & Life）
 human_language,66,人类语,0.016,6,学科与概念（Concept & Subject）
 philbsuniverse,66,双曲线,0.016,6,学科与概念（Concept & Subject）
-theater_director,66,剧场 导演,0.016,1,人物与生命（Person & Life）
+theater_director,66,剧场 导演,1.316,1,人物与生命（Person & Life）
 software_developer,66,软件  开发者,0.016,1,人物与生命（Person & Life）
 brand,65,品牌,0.0158,2,组织与机构（Organization）
 movie,65,电影,0.0158,4,创作与娱乐作品（Creative Work）
-film_art_director,65,电影 艺术 导演,0.0158,1,人物与生命（Person & Life）
+film_art_director,65,电影 艺术 导演,1.0158,1,人物与生命（Person & Life）
 artist_s_or_band_s,65,艺人 s 或 band s,0.0158,1,人物与生命（Person & Life）
 dancingwiththestars,65,与众星共舞,0.0158,5,事件与活动（Event）
 chemistry,64,化学,0.0156,6,学科与概念（Concept & Subject）
 olympic_sport,64,奥林匹克运动( S),0.0156,5,事件与活动（Event）
-man_made_thing,64,人为( M),0.0156,8,属性与度量（Attribute & Measurement）
+man_made_thing,64,人为( M),0.3156,8,属性与度量（Attribute & Measurement）
 siswimsuitmodels,64,女装模型,0.0156,1,人物与生命（Person & Life）
 music_video_director,64,音乐 视频 导演,0.0156,1,人物与生命（Person & Life）
 sponsor,63,提案国,0.0153,1,人物与生命（Person & Life）
@@ -501,21 +501,21 @@ school,46,学校,0.9112,2,组织与机构（Organization）
 librettist,46,自由主义,0.0112,6,学科与概念（Concept & Subject）
 the_27_club,46,27 俱乐部,0.0112,3,地点与地理（Location）
 jamesbond007,46,贾梅斯邦007,0.0112,4,创作与娱乐作品（Creative Work）
-theater_genre,46,剧场流派( G),0.0112,4,创作与娱乐作品（Creative Work）
+theater_genre,46,剧场流派( G),0.612,6,学科与概念（Concept & Subject）
 military_commander,46,军事,0.0112,1,人物与生命（Person & Life）
 nobel_subject_area,46,无贝尔  主题  区域,0.0112,3,地点与地理（Location）
 u_s_congressperson,46,u s 国会人物,0.0112,1,人物与生命（Person & Life）
 film_costumer_designer,46,胶片 计算器 设计器,0.0112,1,人物与生命（Person & Life）
 news_reporting_organisation,46,新闻 报告 组织,0.0112,2,组织与机构（Organization）
 starshapedcitadelsandcities,46,星座结构,0.0112,8,属性与度量（Attribute & Measurement）
-radio_format,45,收音机( F),0.0109,6,学科与概念（Concept & Subject）
+radio_format,45,收音机( F),1.4109,6,学科与概念（Concept & Subject）
 film_screening_venue,45,胶片 屏幕 风景,0.0109,4,创作与娱乐作品（Creative Work）
 wine,44,红酒,0.0107,7,物品与产品（Product & Object）
 oxford,44,牛福尔,0.0107,2,组织与机构（Organization）
 tv_show,44,tv 显示,0.0107,4,创作与娱乐作品（Creative Work）
 urban_district,44,城市地区,0.0107,3,地点与地理（Location）
 de_urban_district,44,市区( D),0.0107,3,地点与地理（Location）
-official_language,44,正式语文,0.0107,6,学科与概念（Concept & Subject）
+official_language,44,正式语文,1.107,6,学科与概念（Concept & Subject）
 company,43,企业,0.0104,2,组织与机构（Organization）
 content,43,内容,0.0104,6,学科与概念（Concept & Subject）
 named_person,43,名称( P),0.0104,1,人物与生命（Person & Life）
@@ -588,7 +588,7 @@ austin,35,奥斯汀,0.0085,3,地点与地理（Location）
 rewards,35,奖励,0.0085,,
 breakfast,35,早饭,0.0085,7,物品与产品（Product & Object）
 joehughes,35,欢呼吧,0.0085,,
-onephylogeny,35,单亲性,0.0085,,
+onephylogeny,35,单亲性,0.85,8,属性与度量（Attribute & Measurement）
 propositions,35,提议,0.0085,,
 inauguration_speaker,35,启用语句( S),0.0085,1,人物与生命（Person & Life）
 cancer_center_constituent,35,癌症( C),0.0085,6,学科与概念（Concept & Subject）
@@ -675,7 +675,7 @@ world_cup_squad,30,世界( C),0.0073,8,属性与度量（Attribute & Measurement
 datedlocationtest,30,日期定位测试,0.0073,,
 government_agency,30,政府机构,0.0073,2,组织与机构（Organization）
 onlineadvertising,30,在线广告,0.0073,7,物品与产品（Product & Object）
-radio_station_owner,30,电台 站台 所有者,0.0073,1,人物与生命（Person & Life）
+radio_station_owner,30,电台 站台 所有者,0.73,1,人物与生命（Person & Life）
 jewish_studies_field,30,犹太语  研究  field,0.0073,6,学科与概念（Concept & Subject）
 sports_championship_event,30,运动( C),0.0073,5,事件与活动（Event）
 ncaa_basketball_tournament,30,ncaa 篮球 进球,0.0073,5,事件与活动（Event）
@@ -815,8 +815,8 @@ techgnostic,21,技术,0.0051,,
 whedonverse,21,转弯,0.0051,,
 tv_crew_role,21,tv 乘员 作用,0.0051,,
 body_of_water,21,单位 水,0.0051,,
-recurring_event,21,重复活动( E),0.0051,,
-theater_company,21,剧场 公司,0.0051,,
+recurring_event,21,重复活动( E),1.0051,5,事件与活动（Event）
+theater_company,21,剧场 公司,1.2051,2,组织与机构（Organization）
 anime_manga_genre,21,anime manga 流派,0.0051,,
 character_species,21,字符( S),0.0051,,
 comic_book_writer,21,漫画   书写器,0.0051,,
@@ -910,7 +910,7 @@ legislator,17,立法者,0.0041,,
 monsterceo,17,怪兽座,0.0041,,
 filmographies,17,电影,0.0041,,
 private_pilot,17,私人驾驶,0.0041,,
-type_of_thing,17,类型( W),0.0041,,
+type_of_thing,17,类型( W),0.3041,8,属性与度量（Attribute & Measurement）
 character_rank,17,字符排序( R),0.0041,,
 animal_synopses,17,动物概要( S),0.0041,,
 simpsons_writer,17,Simpsons 写作器,0.0041,,
@@ -982,7 +982,7 @@ entertainers,15,艺人,0.0036,,
 port_of_call,15,调用端口( O),0.0036,,
 ukparliament,15,议会,0.0036,,
 injured_person,15,受伤人员,0.0036,,
-ontology_class,15,肿瘤学类( C),0.0036,,
+ontology_class,15,肿瘤学类( C),0.6036,6,学科与概念（Concept & Subject）
 victoriassecret,15,胜利秘密,0.0036,,
 character_powers,15,字符权限( V),0.0036,,
 competition_type,15,竞争( T),0.0036,,
@@ -1983,7 +1983,7 @@ environmental_modelling,4,环境建模,0.001,,
 nationalbridgeinventory,4,国家桥梁库存,0.001,,
 nuclear_reactor_coolant,4,核反应堆 冷却剂,0.001,,
 pennsylvania_state_navy,4,宾西法尼亚  状态  导航,0.001,,
-astronomical_observatory,4,天文观测站,0.001,,
+astronomical_observatory,4,天文观测站,0.601,,
 coronationofgeorgevi1937,4,日冕日记1937年,0.001,,
 computer_user_group_focus,4,计算机 用户 组 焦点,0.001,,
 vice_presidential_nominee,4,副总统  空缺,0.001,,
@@ -3958,7 +3958,7 @@ hotel_grading_authority,1,旅馆  等级  授权,0.0002,,
 impersonated_individual,1,冒充  个人,0.0002,,
 impersonated_profession,1,冒充 职业,0.0002,,
 internet_video_director,1,互联网 视频 导演,0.0002,,
-microdata_type_category,1,微数据 类型 类别,0.0002,,
+microdata_type_category,1,微数据 类型 类别,0.2002,8,属性与度量（Attribute & Measurement）
 name_suffix_description,1,名称 后缀 描述,0.0002,,
 named_mythical_creature,1,名称( M),0.0002,,
 ncbitaxonomytowikipedia,1,ncbitaxonomytowikipedia (正辛醇/水分配系数),0.0002,,

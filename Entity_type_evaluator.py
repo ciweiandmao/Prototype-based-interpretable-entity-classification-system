@@ -263,8 +263,8 @@ class EntityClassificationEvaluator:
             # 保存评估结果到文件
             self.save_evaluation_results(judgments, accuracy)
 
-    def save_evaluation_results(self, judgments, accuracy):
-        """保存评估结果到CSV文件"""
+    """    def save_evaluation_results(self, judgments, accuracy):
+        #保存评估结果到CSV文件
         output_file = "entity_classification_evaluation_results.csv"
 
         with open(output_file, 'w', encoding='utf-8', newline='') as f:
@@ -335,7 +335,7 @@ class EntityClassificationEvaluator:
                     f.write(f"{cat_name:<25} {stats['total']:<6} {stats['correct']:<6} {cat_accuracy:.1f}%\n")
 
         print(f"评估摘要已保存到: {summary_file}")
-
+"""
     def run(self):
         """运行评估"""
         print("开始实体分类准确性评估...")

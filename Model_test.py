@@ -135,7 +135,7 @@ def create_and_load_model(g, device):
         )
 
         # 加载训练好的模型权重
-        checkpoint_path = 'models/model_137d.pth'
+        checkpoint_path = 'models/best_model.pth'
         if os.path.exists(checkpoint_path):
             checkpoint = torch.load(checkpoint_path, map_location=device)
 

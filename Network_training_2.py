@@ -494,7 +494,7 @@ class MemoryEfficientExplainabilityAnalyzer:
 # 分批训练和评估函数
 # 修改 train_batch 函数中的打乱部分
 # 修改 train_batch 函数中批量节点的处理
-def train_batch(model, node_features, train_idx, val_idx, labels, num_epochs=50, lr=0.001,
+def train_batch(model, node_features, train_idx, val_idx, labels, num_epochs=15, lr=0.01,
                 weight_decay=1e-4, device=None, train_batch_size=64, eval_batch_size=128):
     """分批训练EntityGradNet模型"""
     if device is None:
@@ -531,6 +531,9 @@ def train_batch(model, node_features, train_idx, val_idx, labels, num_epochs=50,
     train_losses = []
     val_accuracies = []
 
+    # 计算总批次数
+    total_batches = (len(train_idx_array) + train_batch_size - 1) // train_batch_size
+
     for epoch in range(num_epochs):
         model.train()
 
@@ -544,8 +547,13 @@ def train_batch(model, node_features, train_idx, val_idx, labels, num_epochs=50,
             batch_nodes = batch_indices.tolist()  # 使用列表而不是张量
             batch_labels = labels[batch_indices]
 
+            # 计算进度百分比
+            current_batch = i // train_batch_size + 1
+            progress_percent = (i + len(batch_nodes)) / len(train_idx_array) * 100
+
             if len(batch_nodes) == 0:
                 continue
+
 
             # 前向传播
             node_embeddings = model(node_features, batch_nodes)
@@ -572,10 +580,18 @@ def train_batch(model, node_features, train_idx, val_idx, labels, num_epochs=50,
 
             epoch_loss += loss.item() * len(batch_nodes)
 
+            # 显示进度
+            print(
+                f"\rEpoch {epoch + 1}/{num_epochs} - 进度: {progress_percent:.1f}% (批次 {current_batch}/{total_batches})",
+                end="")
+
+            # 换行显示本epoch结果
+            print()  # 换行
             # 清理中间变量释放内存
             del node_embeddings, probs, predicted, explanations
             if torch.cuda.is_available():
                 torch.cuda.empty_cache()
+
 
         # 计算平均损失
         avg_loss = epoch_loss / len(train_idx_array) if len(train_idx_array) > 0 else 0
@@ -1029,7 +1045,7 @@ def run_memory_efficient_entitygradnet(gpu_id=0, data_path='data/FB15KET'):
     print(f"\n开始分批训练，使用设备: {device}")
     trained_model, train_losses, val_accuracies = train_batch(
         model, node_features, train_idx, val_idx, g.nodes['entity'].data['label'],
-        num_epochs=30, lr=0.001, weight_decay=1e-4, device=device,
+        num_epochs=15, lr=0.01, weight_decay=1e-4, device=device,
         train_batch_size=32, eval_batch_size=64
     )
 

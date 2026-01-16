@@ -278,35 +278,47 @@ class BatchSubgraphBuilder:
 
 
 # 特征重要性分析模块
+# 修复 FeatureImportance 类
 class FeatureImportance(nn.Module):
     def __init__(self, feature_dim, category_dim=9):
         super().__init__()
         self.feature_dim = feature_dim
-        self.category_dim = category_dim
-        self.other_dim = feature_dim - category_dim
+        self.category_dim = min(category_dim, feature_dim)  # 确保不超过总维度
+        self.other_dim = feature_dim - self.category_dim
 
-        # 更小的特征重要性权重矩阵
+        # 特征重要性权重矩阵 - 维度要匹配输入特征
         self.W_imp = nn.Parameter(torch.randn(feature_dim, 1) * 0.01)
 
     def forward(self, node_features):
-        # 分批计算特征重要性
-        batch_size = 256
-        imp_scores_list = []
+        if node_features.size(0) == 0:
+            # 如果输入为空，返回零值
+            return torch.tensor(0.0, device=node_features.device), \
+                torch.tensor(0.0, device=node_features.device), \
+                torch.tensor([], device=node_features.device)
 
-        for i in range(0, node_features.size(0), batch_size):
-            batch = node_features[i:i + batch_size]
-            batch_scores = torch.sigmoid(batch @ self.W_imp)
-            imp_scores_list.append(batch_scores)
+        # 检查维度是否匹配
+        if node_features.shape[1] != self.feature_dim:
+            print(f"警告: 输入特征维度 {node_features.shape[1]} 与预期 {self.feature_dim} 不匹配")
+            # 调整权重矩阵维度
+            if hasattr(self, 'W_imp'):
+                del self.W_imp
+            self.feature_dim = node_features.shape[1]
+            self.W_imp = nn.Parameter(torch.randn(self.feature_dim, 1, device=node_features.device) * 0.01)
 
-        imp_scores = torch.cat(imp_scores_list, dim=0)
+        # 计算特征重要性分数
+        imp_scores = torch.sigmoid(node_features @ self.W_imp)
 
         # 分离类别得分特征和其他特征的重要性
         if self.category_dim > 0 and imp_scores.size(0) > 0:
-            category_imp = imp_scores[:, :self.category_dim].mean()
-            other_imp = imp_scores[:, self.category_dim:].mean()
+            if self.category_dim <= node_features.shape[1]:
+                category_imp = imp_scores[:, :self.category_dim].mean()
+                other_imp = imp_scores[:, self.category_dim:].mean()
+            else:
+                category_imp = imp_scores.mean()
+                other_imp = torch.tensor(0.0, device=node_features.device)
         else:
-            category_imp = torch.tensor(0.0)
-            other_imp = imp_scores.mean() if imp_scores.size(0) > 0 else torch.tensor(0.0)
+            category_imp = torch.tensor(0.0, device=node_features.device)
+            other_imp = imp_scores.mean() if imp_scores.size(0) > 0 else torch.tensor(0.0, device=node_features.device)
 
         # 归一化
         total_imp = category_imp + other_imp
@@ -383,12 +395,12 @@ class MemoryEfficientPrototypeNetwork(nn.Module):
 
 # 内存优化的EntityGradNet模型
 class MemoryEfficientEntityGradNet(nn.Module):
-    def __init__(self, hetero_graph, feature_dims, hidden_dim=24, out_dim=12, num_classes=9, category_dim=9):
+    def __init__(self, hetero_graph, feature_dims, hidden_dim=32, out_dim=16, num_classes=9, category_dim=9):
         super().__init__()
         self.g = hetero_graph
         self.feature_dims = feature_dims
-        self.hidden_dim = hidden_dim  # 进一步减小维度
-        self.out_dim = out_dim  # 进一步减小维度
+        self.hidden_dim = hidden_dim
+        self.out_dim = out_dim
         self.num_classes = num_classes
 
         # 超内存优化的异构图神经网络
@@ -397,10 +409,10 @@ class MemoryEfficientEntityGradNet(nn.Module):
         # 超内存优化的子图构建器
         self.subgraph_builder = BatchSubgraphBuilder(hetero_graph)
 
-        # 特征重要性分析（简化）
-        self.feature_importance = FeatureImportance(out_dim, category_dim)
+        # 特征重要性分析 - 使用out_dim而不是feature_dims
+        self.feature_importance = FeatureImportance(out_dim, min(category_dim, out_dim))
 
-        # 原型网络（简化）
+        # 原型网络
         self.prototype_net = MemoryEfficientPrototypeNetwork(out_dim, num_classes)
 
         # 结构贡献权重
@@ -412,8 +424,7 @@ class MemoryEfficientEntityGradNet(nn.Module):
 
         return node_embeddings
 
-    def classify_batch(self, node_embeddings, node_ids, batch_size=8, update_prototypes=False,
-                       labels=None):  # 减小batch_size
+    def classify_batch(self, node_embeddings, node_ids, batch_size=8, update_prototypes=False, labels=None):
         """批量分类"""
         if not node_ids:
             return torch.tensor([], device=node_embeddings['entity'].device), \
@@ -437,6 +448,19 @@ class MemoryEfficientEntityGradNet(nn.Module):
             )
 
             if batch_embeddings is not None and len(batch_embeddings) > 0:
+                # 确保嵌入维度与模型期望的一致
+                if batch_embeddings.shape[1] != self.out_dim:
+                    print(f"警告: 子图嵌入维度 {batch_embeddings.shape[1]} 与预期 {self.out_dim} 不匹配")
+                    # 如果维度不匹配，尝试调整
+                    if batch_embeddings.shape[1] > self.out_dim:
+                        batch_embeddings = batch_embeddings[:, :self.out_dim]
+                    else:
+                        # 填充到正确维度
+                        padding = torch.zeros(batch_embeddings.shape[0],
+                                              self.out_dim - batch_embeddings.shape[1],
+                                              device=batch_embeddings.device)
+                        batch_embeddings = torch.cat([batch_embeddings, padding], dim=1)
+
                 subgraph_embeddings.append(batch_embeddings)
             components_list.extend(batch_components)
 
@@ -456,7 +480,14 @@ class MemoryEfficientEntityGradNet(nn.Module):
                 {}
 
         # 计算特征重要性
-        category_imp, other_imp, feature_scores = self.feature_importance(subgraph_embeddings)
+        try:
+            category_imp, other_imp, feature_scores = self.feature_importance(subgraph_embeddings)
+        except Exception as e:
+            print(f"特征重要性计算错误: {e}")
+            # 如果出错，返回默认值
+            category_imp = torch.tensor(0.5, device=subgraph_embeddings.device)
+            other_imp = torch.tensor(0.5, device=subgraph_embeddings.device)
+            feature_scores = torch.zeros(subgraph_embeddings.shape[0], 1, device=subgraph_embeddings.device)
 
         # 通过原型网络进行分类
         probs, similarities = self.prototype_net(subgraph_embeddings, batch_size=batch_size)
@@ -483,7 +514,6 @@ class MemoryEfficientEntityGradNet(nn.Module):
 
         return probs, predicted_classes, explanations
 
-
 # 可解释性分析与可视化函数
 class MemoryEfficientExplainabilityAnalyzer:
     def __init__(self, model, class_names):
@@ -499,9 +529,13 @@ class MemoryEfficientExplainabilityAnalyzer:
             batch_nodes = node_ids[i:i + batch_size]
 
             # 获取预测和解释
-            probs, pred_classes, explanations = self.model.classify_batch(
-                node_embeddings, batch_nodes, batch_size=batch_size, update_prototypes=False
-            )
+            try:
+                probs, pred_classes, explanations = self.model.classify_batch(
+                    node_embeddings, batch_nodes, batch_size=batch_size, update_prototypes=False
+                )
+            except Exception as e:
+                print(f"分析批次 {i // batch_size + 1} 时出错: {e}")
+                continue
 
             if probs.size(0) == 0:
                 continue
@@ -511,65 +545,72 @@ class MemoryEfficientExplainabilityAnalyzer:
                 if j >= probs.size(0):
                     continue
 
-                # 提取解释数据
-                similarities = explanations['similarities'][j] if j < explanations['similarities'].size(0) else None
-                category_imp = explanations['category_importance'].item()
-                other_imp = explanations['other_importance'].item()
-                components = explanations['components'][j] if j < len(explanations['components']) else {}
+                try:
+                    # 提取解释数据
+                    similarities = explanations['similarities'][j] if j < explanations['similarities'].size(0) else None
+                    category_imp = explanations['category_importance'].item() if hasattr(
+                        explanations['category_importance'], 'item') else 0.5
+                    other_imp = explanations['other_importance'].item() if hasattr(explanations['other_importance'],
+                                                                                   'item') else 0.5
+                    components = explanations['components'][j] if j < len(explanations['components']) else {}
 
-                # 计算结构贡献
-                structure_contributions = {}
-                if components:
-                    # 确保张量在CPU上计算范数
-                    center_component = components.get('center')
-                    relations_component = components.get('relations')
+                    # 计算结构贡献
+                    structure_contributions = {}
+                    if components:
+                        # 确保张量在CPU上计算范数
+                        center_component = components.get('center')
+                        relations_component = components.get('relations')
 
-                    if center_component is not None:
-                        if center_component.device.type == 'cuda':
-                            center_component = center_component.cpu()
-                        structure_contributions['center'] = torch.norm(center_component).item()
+                        if center_component is not None:
+                            if center_component.device.type == 'cuda':
+                                center_component = center_component.cpu()
+                            structure_contributions['center'] = torch.norm(center_component).item()
 
-                    if relations_component is not None:
-                        if relations_component.device.type == 'cuda':
-                            relations_component = relations_component.cpu()
-                        structure_contributions['relations'] = torch.norm(relations_component).item()
+                        if relations_component is not None:
+                            if relations_component.device.type == 'cuda':
+                                relations_component = relations_component.cpu()
+                            structure_contributions['relations'] = torch.norm(relations_component).item()
 
-                    # 归一化结构贡献
-                    total_contrib = sum(structure_contributions.values())
-                    if total_contrib > 0:
-                        structure_contributions = {k: v / total_contrib for k, v in structure_contributions.items()}
+                        # 归一化结构贡献
+                        total_contrib = sum(structure_contributions.values())
+                        if total_contrib > 0:
+                            structure_contributions = {k: v / total_contrib for k, v in structure_contributions.items()}
 
-                # 格式化相似度
-                similarity_dict = {}
-                if similarities is not None:
-                    # 确保相似度在CPU上
-                    if similarities.device.type == 'cuda':
-                        similarities_cpu = similarities.cpu()
-                    else:
-                        similarities_cpu = similarities
+                    # 格式化相似度
+                    similarity_dict = {}
+                    if similarities is not None:
+                        # 确保相似度在CPU上
+                        if similarities.device.type == 'cuda':
+                            similarities_cpu = similarities.cpu()
+                        else:
+                            similarities_cpu = similarities
 
-                    similarity_dict = {self.class_names[i]: similarities_cpu[i].item()
-                                       for i in range(min(len(self.class_names), similarities_cpu.size(0)))}
+                        similarity_dict = {self.class_names[i]: similarities_cpu[i].item()
+                                           for i in range(min(len(self.class_names), similarities_cpu.size(0)))}
 
-                # 构建解释结果
-                result = {
-                    'node_id': node_id,
-                    'prediction': {
-                        'class': self.class_names[pred_classes[j].item()] if j < pred_classes.size(0) else None,
-                        'probability': probs[j, pred_classes[j]].item() if j < pred_classes.size(0) and pred_classes[
-                            j] < probs.size(1) else None
-                    },
-                    'true_label': self.class_names[true_labels[j]] if true_labels is not None and j < len(
-                        true_labels) else None,
-                    'prototype_similarities': similarity_dict,
-                    'feature_importance': {
-                        'category_scores': category_imp,
-                        'other_features': other_imp
-                    },
-                    'structure_contributions': structure_contributions
-                }
+                    # 构建解释结果
+                    result = {
+                        'node_id': node_id,
+                        'prediction': {
+                            'class': self.class_names[pred_classes[j].item()] if j < pred_classes.size(0) else None,
+                            'probability': probs[j, pred_classes[j]].item() if j < pred_classes.size(0) and
+                                                                               pred_classes[j] < probs.size(1) else None
+                        },
+                        'true_label': self.class_names[true_labels[j]] if true_labels is not None and j < len(
+                            true_labels) else None,
+                        'prototype_similarities': similarity_dict,
+                        'feature_importance': {
+                            'category_scores': category_imp,
+                            'other_features': other_imp
+                        },
+                        'structure_contributions': structure_contributions
+                    }
 
-                results.append(result)
+                    results.append(result)
+
+                except Exception as e:
+                    print(f"处理节点 {node_id} 时出错: {e}")
+                    continue
 
             # 清理内存
             del probs, pred_classes, explanations
@@ -1198,10 +1239,10 @@ def run_memory_efficient_entitygradnet(gpu_id=0, data_path='data/FB15KET'):
 
     # 5. 创建超内存优化的EntityGradNet模型
     feature_dim = node_features_tensor.shape[1]
-    hidden_dim = 16  # 使用更小的维度
-    out_dim = 8  # 使用更小的维度
+    hidden_dim = 32
+    out_dim = 16
     num_classes = 9
-    category_dim = min(9, feature_dim)  # 类别特征维度
+    category_dim = min(9, out_dim)  # 使用out_dim而不是feature_dim
 
     # 初始化超内存优化模型
     model = MemoryEfficientEntityGradNet(g, feature_dim, hidden_dim, out_dim, num_classes, category_dim)

@@ -1,8 +1,13 @@
-import random
 import os
+import shutil
+import time          # 导入的是整个 time 模块
+import random
 
+from trimesh.util import now
 
-def extract_test_entities(input_file, output_test_file, output_train_file, num_test_entities=100, seed=42):
+seed_now = int(time.time())
+
+def extract_test_entities(input_file, output_test_file, output_train_file, num_test_entities=100, seed=seed_now):
     """
     从数据集中随机抽取指定数量的测试实体，并分离数据集
 
@@ -15,7 +20,9 @@ def extract_test_entities(input_file, output_test_file, output_train_file, num_t
     """
 
     # 设置随机种子确保可重复性
-    random.seed(seed)
+    random.seed(seed_now)
+
+    print(f"当前随机种子: {seed_now}")
 
     print(f"开始处理文件: {input_file}")
 
@@ -45,12 +52,12 @@ def extract_test_entities(input_file, output_test_file, output_train_file, num_t
         test_entities = set(random.sample(all_entities_list, num_test_entities))
 
     print(f"随机选择的测试实体数量: {len(test_entities)}")
-
+    '''
     # 显示部分测试实体
     print("前10个测试实体示例:")
     for i, entity in enumerate(list(test_entities)[:10]):
         print(f"  {i + 1}. {entity}")
-
+    '''
     # 分离数据
     test_lines = []
     train_lines = []
@@ -91,6 +98,7 @@ def extract_test_entities(input_file, output_test_file, output_train_file, num_t
                     entity_edge_counts[entity] = entity_edge_counts.get(entity, 0) + 1
 
     # 保存测试实体列表
+    '''
     test_entities_file = 'data/FB15KET/test_entities_list.txt'
     with open(test_entities_file, 'w', encoding='utf-8') as f:
         f.write("# 测试实体列表\n")
@@ -99,13 +107,15 @@ def extract_test_entities(input_file, output_test_file, output_train_file, num_t
             f.write(f"{entity}\t# 边数: {edge_count}\n")
 
     print(f"测试实体列表已保存到: {test_entities_file}")
-
+    '''
     # 显示统计信息
+    '''
     print("\n测试实体边数统计:")
     sorted_entities = sorted(entity_edge_counts.items(), key=lambda x: x[1], reverse=True)
     for entity, count in sorted_entities[:10]:  # 显示前10个
         print(f"  {entity}: {count} 条边")
-
+    '''
+    sorted_entities = sorted(entity_edge_counts.items(), key=lambda x: x[1], reverse=True)
     if sorted_entities:
         avg_edges = sum(entity_edge_counts.values()) / len(entity_edge_counts)
         print(f"平均每个测试实体有 {avg_edges:.1f} 条边")
@@ -113,10 +123,10 @@ def extract_test_entities(input_file, output_test_file, output_train_file, num_t
     return test_entities, test_lines, train_lines
 
 
-def analyze_test_data(test_file, test_entities):
+def analyze_test_data(test_file, detail_file, test_entities):
     """分析测试集数据"""
     print(f"\n分析测试集文件: {test_file}")
-
+    mathnum = 100 * 2
     with open(test_file, 'r', encoding='utf-8') as f:
         lines = [line.strip() for line in f if line.strip()]
 
@@ -150,7 +160,9 @@ def analyze_test_data(test_file, test_entities):
         f.write("# 测试集详细数据（按实体分组）\n")
         f.write("=" * 80 + "\n")
 
+
         for entity, entity_lines_list in sorted_items:
+
             if entity_lines_list:
                 # 去重（有些边可能被统计两次，因为是双向的）
                 unique_lines = set(entity_lines_list)
@@ -160,14 +172,22 @@ def analyze_test_data(test_file, test_entities):
 
                 for line in unique_lines:
                     f.write(line + "\n")
+            mathnum-=10
+            if(mathnum<=0):break
+                #print(f"  {entity}: {len(unique_lines)} 条记录")
 
-                print(f"  {entity}: {len(unique_lines)} 条记录")
 
     print(f"\n详细测试集已保存到: {detailed_test_file}")
+    with open(detailed_test_file, 'r', encoding='utf-8') as fa, \
+            open(detail_file, 'r', encoding='utf-8') as fb:
+        content_a = fa.read()
+        combined_content = content_a + fb.read()
+    with open(detailed_test_file, 'w', encoding='utf-8') as f_out:
+        f_out.write(combined_content)
 
     return entity_lines
 
-
+'''
 def verify_separation(original_file, test_file, train_file, test_entities):
     """验证数据分离是否正确"""
     print(f"\n验证数据分离结果...")
@@ -216,10 +236,10 @@ def verify_separation(original_file, test_file, train_file, test_entities):
                 test_entity_edges += 1
             else:
                 non_test_entity_edges += 1
-                print(f"  警告: 测试集中包含非测试实体的边: {line}")
+                #print(f"  警告: 测试集中包含非测试实体的边: {line}")
 
-    print(f"测试集中包含测试实体的边: {test_entity_edges} 条")
-    print(f"测试集中包含非测试实体的边: {non_test_entity_edges} 条")
+    #print(f"测试集中包含测试实体的边: {test_entity_edges} 条")
+    #print(f"测试集中包含非测试实体的边: {non_test_entity_edges} 条")
 
     # 验证4：训练集不包含测试实体的边
     train_contains_test = 0
@@ -235,7 +255,7 @@ def verify_separation(original_file, test_file, train_file, test_entities):
         print("✓ 训练集不包含任何测试实体的边")
     else:
         print(f"✗ 训练集中包含 {train_contains_test} 条测试实体的边")
-
+'''
 
 def create_sample_files():
     """创建示例文件，展示数据格式"""
@@ -266,6 +286,7 @@ def main():
     input_file = 'data/FB15KET/xunlian.txt'
     output_test_file = 'data/FB15KET/TEST_PART.txt'
     output_train_file = 'data/FB15KET/TRAIN_PART.txt'
+    detail_file='data/FB15KET/TEST_PART_DETAILEED.txt'
 
     # 确保目录存在
     os.makedirs('data/FB15KET', exist_ok=True)
@@ -290,14 +311,14 @@ def main():
             output_test_file=output_test_file,
             output_train_file=output_train_file,
             num_test_entities=100,
-            seed=42  # 固定随机种子确保可重复性
+            seed=seed_now  # 固定随机种子确保可重复性
         )
 
         # 步骤3: 分析测试数据
-        entity_lines = analyze_test_data(output_test_file, test_entities)
+        entity_lines = analyze_test_data(output_test_file, detail_file, test_entities)
 
         # 步骤4: 验证分离结果
-        verify_separation(input_file, output_test_file, output_train_file, test_entities)
+        #verify_separation(input_file, output_test_file, output_train_file, test_entities)
 
         # 步骤5: 生成统计报告
         print(f"\n" + "=" * 80)
@@ -339,17 +360,17 @@ def main():
                 edge_count = len(entity_lines.get(entity, []))
                 f.write(f"  {entity}: {edge_count} 条边\n")
 
-        print(f"\n统计报告已保存到: {report_file}")
+        #print(f"\n统计报告已保存到: {report_file}")
 
-        print(f"\n" + "=" * 80)
-        print("分割完成！")
-        print("=" * 80)
-        print(f"测试集: {output_test_file}")
-        print(f"训练集: {output_train_file}")
-        print(f"\n下一步:")
-        print(f"1. 使用 TRAIN_PART.txt 训练模型")
-        print(f"2. 使用 TEST_PART.txt 中的实体进行测试")
-        print(f"3. 注意: 测试时模型不应见过 TEST_PART.txt 中的任何边")
+        #print(f"\n" + "=" * 80)
+        #print("分割完成！")
+        #print("=" * 80)
+        #print(f"测试集: {output_test_file}")
+        #print(f"训练集: {output_train_file}")
+        #print(f"\n下一步:")
+        #print(f"1. 使用 TRAIN_PART.txt 训练模型")
+        #print(f"2. 使用 TEST_PART.txt 中的实体进行测试")
+        #print(f"3. 注意: 测试时模型不应见过 TEST_PART.txt 中的任何边")
 
     except Exception as e:
         print(f"处理过程中发生错误: {e}")

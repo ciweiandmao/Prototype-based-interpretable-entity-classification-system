@@ -1,0 +1,9 @@
+# FB15KET 数据集示例格式
+# 每行格式: 实体ID-关系tag数组-实体ID
+/m/027rn	/location/country/form_of_government	/m/06cx9
+/m/017dcd	/tv/tv_program/regular_cast./tv/regular_tv_appearance/actor	/m/06v8s0
+/m/07s9rl0	/media_common/netflix_genre/titles	/m/0170z3
+/m/011k_j	/music/instrument	/m/01234
+/m/011k_j	/music/performance_role	/m/05678
+/m/01234	/media_common/netflix_genre/titles	/m/0170z3
+/m/05678	/location/country/form_of_government	/m/027rn

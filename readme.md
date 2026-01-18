@@ -8,5 +8,5 @@
 8.运行Entity_type_evaluator.py对结果进行人工评估，若出现和事实不符的实体返回对tag信息进行人工修正，直到准确率95%以上<br><br>
 9.将train.txt ,valid.txt, test.txt和并为xunlian.txt<br><br>
 10.运行Generate_train_test_part.py随机将xunlian.txt分割为TEST_PART_DETAIL.txt和TRAIN_PART.txt,其中被选为测试实体的任意一条边都不存在于训练集<br><br>
-11.运行Torch_Train_2.py使用IGardNet和ResGNN结合的办法训练模型，得到entity_type_predictor_resgcn.pth<br><br>
+11.运行Torch_Train_2.py使用IGardNet和ResGCN结合的办法训练模型，得到entity_type_predictor_resgcn.pth<br><br>
 12.运行测试Torch_Test.py输入TEST_PART_DETAIL.txt,对选中的实体进行预测并和Entity_All_typed.csv中真实结果对比，准确率80%-90%<br><br>

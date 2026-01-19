@@ -70,7 +70,6 @@ class ResGCN(nn.Module):
         out = self.fc(h)
         return out
 
-
 def load_training_data():
     """加载训练数据"""
     print("=" * 60)
@@ -301,7 +300,6 @@ def build_graph_and_features(triples, entity_types, relation_counter):
     return (g, node_features, entity_to_idx, idx_to_entity, entity_to_type,
             label_mask_list, labels_list, scaler, feature_names, neighbor_type_stats)
 
-
 def prepare_labels(labels_list, label_mask_list, entity_to_idx):
     """准备标签"""
     print("\n准备标签...")
@@ -333,7 +331,6 @@ def prepare_labels(labels_list, label_mask_list, entity_to_idx):
     class_weights = class_weights / class_weights.sum()
 
     return labels, label_encoder, num_classes, class_weights
-
 
 def train_model(model, g, features, labels, train_mask, val_mask, class_weights):
     """训练模型"""
@@ -448,7 +445,6 @@ def train_model(model, g, features, labels, train_mask, val_mask, class_weights)
 
     return model, val_acc, val_f1
 
-
 def save_model(model, model_config, entity_to_idx, label_encoder, scaler,
                node_features, feature_names, best_val_acc, best_val_f1,
                neighbor_type_stats, idx_to_entity):
@@ -500,8 +496,6 @@ Dropout率: {model_config['dropout']}
     print(config_info)
 
     return model_path
-
-
 def evaluate_single_entity(model, g, features, entity_to_idx, idx_to_entity,
                            label_encoder, entity_to_type, neighbor_type_stats,
                            triples, test_entity=None):
@@ -594,8 +588,6 @@ def evaluate_single_entity(model, g, features, entity_to_idx, idx_to_entity,
     print(f"  有标签的邻居数: {stats.get('labeled_neighbor_count', 0)}")
     print(f"  不同邻居类型数: {stats.get('unique_neighbor_types', 0)}")
     print(f"  最常见的邻居类型: {stats.get('most_common_neighbor_type', 0)}")
-
-
 def main():
     """主训练函数"""
     print("=" * 80)
@@ -702,7 +694,6 @@ def main():
         print(f"训练过程中发生错误: {e}")
         import traceback
         traceback.print_exc()
-
 
 if __name__ == "__main__":
     from collections import defaultdict, Counter

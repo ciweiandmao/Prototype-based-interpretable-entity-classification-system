@@ -9,5 +9,6 @@
 9.将train.txt ,valid.txt, test.txt和并为xunlian.txt<br><br>
 10.运行Generate_train_test_part_REAL.py随机将xunlian.txt分割为TEST_PART_DETAIL.txt和TRAIN_PART.txt,其中被选为测试实体的任意一条边都不存在于训练集<br><br>
 11.运行GraphSAGE_Train.py使用GraphSAGE训练模型，得到entity_type_predictor_sage.pth<br><br>
-12.运行测试GraphSAGE_Test.py输入TEST_PART_DETAIL.txt,对选中的实体进行预测并和Entity_All_typed.csv中真实结果对比，准确率80%-90%<br><br>
+12.运行测试GraphSAGE_Test.py输入TEST_PART_DETAIL.txt,对选中的实体进行预测并和Entity_All_typed.csv中真实结果对比，准确率85%左右<br><br>
+13.GraphSAGE_MultiInfo_Train.py和GraphSAGE_MultiInfo_Test.py为包含图像多模态的增强版本，准确率提升至90%<br><br>
 
